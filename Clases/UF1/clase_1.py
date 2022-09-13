@@ -1,4 +1,4 @@
-#Tipos de variable
+""" #Tipos de variable
 texto: str = "Hola, soy un texto largo y tedioso"
 numeros: int = 99999
 complejos: complex = 1j
@@ -39,4 +39,4 @@ print(nombre)
 apellido = input ("Indique su apellido: ")
 
 nombre_completo = nombre + " " + apellido
-print(nombre_completo)
+print(nombre_completo) """
