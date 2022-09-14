@@ -1,4 +1,4 @@
-""" #Tipos de variable
+# Tipos de variable
 texto: str = "Hola, soy un texto largo y tedioso"
 numeros: int = 99999
 complejos: complex = 1j
@@ -13,30 +13,30 @@ print(decimales)
 print(tupla)
 print(diccionario)
 
-#Un string es un conjunto de caracteres, y podemos acceder a cada uno de ellos.
+# Un string es un conjunto de caracteres, y podemos acceder a cada uno de ellos.
 print(texto[1])
 
-#Justo como en las tuplas
+# Justo como en las tuplas
 print(tupla[1])
 
-#Podemos operar con los tipos basicos
+# Podemos operar con los tipos basicos
 
 t1 = "hola"
 t2 = " que tal?"
-print(t1+t2) #Como vemos, se concatenan las variables
+print(t1 + t2)  # Como vemos, se concatenan las variables
 
 n1 = 5
 n2 = 20
-print(n1+n2)#en cambio los numeros se suman
+print(n1 + n2)  # en cambio los numeros se suman
 
 nombre = input("Indique su nombre: ")
 print("Hola " + nombre)
 
-#Podemos añadir texto, concatenando
-#nombre += " Hola!!!!"
+# Podemos añadir texto, concatenando
+# nombre += " Hola!!!!"
 print(nombre)
 
-apellido = input ("Indique su apellido: ")
+apellido = input("Indique su apellido: ")
 
 nombre_completo = nombre + " " + apellido
-print(nombre_completo) """
+print(nombre_completo)
