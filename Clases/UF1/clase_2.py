@@ -4,6 +4,13 @@ print("Hola")
 # Print sin argumentos es un salto de linea
 print()
 
+# Tambien si indicamos \n pondremos un salto de linea
+print("Hola\nSaltamos linea")
+
+# Y si queremos que muestre \n ponemos la barra, con el caracter de escape
+
+print("Hola\\nque tal")
+
 # Argumento de separacion
 print("nombre", "apellido", "edad", sep=" - ")
 
@@ -82,3 +89,17 @@ print(str(var))
 var = 1
 var += 1
 print(str(var))
+
+# Entrada de teclado
+var = input("Pon tus datos: ")
+"""
+ Lo obtenido en var siempre es una cadena/string. Y si necesitamos otro tipo de datos vamos a
+ forzar el cambio de variable, o castear.
+ 
+ int()
+ str()
+ float()
+ etc...
+"""
+
+
