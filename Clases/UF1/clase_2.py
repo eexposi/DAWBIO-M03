@@ -1,3 +1,5 @@
+"""Clase viernes 16 sept. 2022"""
+
 # FUNCIÓN PRINT
 print("Hola")
 
@@ -102,4 +104,49 @@ var = input("Pon tus datos: ")
  etc...
 """
 
-# ------- Tras los ejercicios 1 y 2 ------------ Emp
+# ------- Tras los ejercicios 1 y 2 ------------ Condicionales
+
+"""
+Estructura
+
+if (condicion):
+    {
+    Lo que se ejecutará si se cumple la condicion.
+    }
+else:
+    {
+    lo que se ejecutara si NO se cumple
+    }
+"""
+
+var = 1
+if var == 1:
+    print("Es igual a 1")
+else:
+    print("No es igual a 1")
+
+"""
+Operadores:
+
+== 
+!=
+>
+<
+>=
+<=
+
+(True) 
+
+Podemos concatenar condiciones:
+
+and y or
+"""
+
+var1 = 10
+var2 = -10
+
+if var1 > 0 and var2 < 0:
+    print("Ambas cumplen las condiciones")
+
+if var1 > 0 or var2 < 0:
+    print("Una cumple la condicion")
