@@ -68,7 +68,7 @@ var: float = 1.1
 var: complex = 1j
 var: tuple = (1, 2)  # No se pueden modificar
 var = [1, 2]  # array
-var: bool = True
+var: bool = True  # o False
 var: dict = ["key:value"]
 
 # RECORDEMOS
@@ -102,4 +102,4 @@ var = input("Pon tus datos: ")
  etc...
 """
 
-
+# ------- Tras los ejercicios 1 y 2 ------------ Emp
