@@ -9,22 +9,22 @@ Las printaremos todas separandolas por "---" entre ellas en un solo print. Y fin
 Solicitaremos al usuario una palabra y un número.
 Repetiremos en una variable la palabra tantas veces como diga la constante.
 """
-# import array
-#
-# texto: str = "Hola soy un texto"
-# numero: int = 100
-# decimal: float = 2.5
-# complejo: complex = 5j
-# tup: tuple = ("0", "1")
-# arr: array = [0, 1]
-# dic: dict = {"key": "value"}
-# bol: bool = True
-# CONSTANTE = 100
-# print(texto, numero, decimal, complejo, tup, arr, dic, bol, CONSTANTE, sep="---", end="------]]")
-# print()
-# palabra = input("Palabra: ")
-# numero = int(input("Numero: "))
-# print(palabra * (CONSTANTE // numero))
+import array
+
+texto: str = "Hola soy un texto"
+numero: int = 100
+decimal: float = 2.5
+complejo: complex = 5j
+tup: tuple = ("0", "1")
+arr: array = [0, 1]
+dic: dict = {"key": "value"}
+bol: bool = True
+CONSTANTE = 100
+print(texto, numero, decimal, complejo, tup, arr, dic, bol, CONSTANTE, sep="---", end="------]]")
+print()
+palabra = input("Palabra: ")
+numero = int(input("Numero: "))
+print(palabra * (CONSTANTE // numero))
 """
 EJERCICIO 2
 
@@ -32,27 +32,18 @@ Pediremos al usuario horas, minutos y segundos de inicio de un evento y su durac
 Calcularemos la hora exacta a la que termina el evento
 """
 
-# horas = int(input("Hora: "))
-# minuts = int(input("Mins: "))
-# seg = int(input("Segs: "))
-# duracion = int(input("Duración: "))
-#
-# todo_segundos = (horas*60*60)+(minuts*60)+seg
-# total = todo_segundos + duracion
-# print("Total seg: " + str(total))
-# total_min = total / 60 / 60
-# print(str(total_min))
-
-
 hora = int(input("Hora: "))
 minu = int(input("Minutos: "))
+segu = int(input("Segundos: "))
 dura = int(input("Duración: "))
 
-tiempo_tot_minutos = (hora * 60) + minu + dura
-hora_fin_minutos = tiempo_tot_minutos // 60
+
+tiempo_tot_seg = (hora * 60 * 60) + (minu * 60) + segu + dura
+hora_fin_minutos = tiempo_tot_seg // 60
 horas_finales = hora_fin_minutos % 24
-minutosFinal = tiempo_tot_minutos % 60
-print(str(horas_finales), str(minutosFinal), sep=":")
+minutos_final = tiempo_tot_seg % 60
+seg_final = tiempo_tot_seg % 60
+print(str(horas_finales), str(minutos_final), str(seg_final), sep=":")
 
 """
 EJERCICIO 3
