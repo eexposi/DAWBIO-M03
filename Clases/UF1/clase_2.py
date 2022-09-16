@@ -105,6 +105,13 @@ var = input("Pon tus datos: ")
 """
 
 # ------- Tras los ejercicios 1 y 2 ------------ Condicionales
+# Empezamos con los condicionales sin IF
+
+var1 = 1
+print(var1 == 3) #Sera false porque no se cumple la condicion
+print(var1 < 10) # Esta si se cumple
+
+
 
 """
 Estructura
