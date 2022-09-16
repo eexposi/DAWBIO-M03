@@ -33,17 +33,14 @@ Calcularemos la hora exacta a la que termina el evento
 """
 
 hora = int(input("Hora: "))
-minu = int(input("Minutos: "))
-segu = int(input("Segundos: "))
+minuts = int(input("Minutos: "))
 dura = int(input("Duración: "))
 
-
-tiempo_tot_seg = (hora * 60 * 60) + (minu * 60) + segu + dura
-hora_fin_minutos = tiempo_tot_seg // 60
-horas_finales = hora_fin_minutos % 24
-minutos_final = tiempo_tot_seg % 60
-seg_final = tiempo_tot_seg % 60
-print(str(horas_finales), str(minutos_final), str(seg_final), sep=":")
+tiempo_total_minutos = (hora * 60) + minuts + dura
+hora_final_en_minutos = tiempo_total_minutos // 60
+hora_final = hora_final_en_minutos % 24
+minutos_final = tiempo_total_minutos % 60
+print(str(hora_final) + ":" + str(minutos_final))
 
 """
 EJERCICIO 3
@@ -51,8 +48,8 @@ Crearemos 2 constantes (nombre y usuario).
 Pediremos al usuario que introduzca por teclado un nombre y un usuario
 Comprobaremos de forma separada cada uno de ellos, indicandole al usuario si son o no correctos.
 Finalmente, si ambos son correctos, guardaremos en una variable boolean el resultado y se lo mostraremos por pantalla.
-
 """
+
 NOMBRE = "Eric"
 USUARIO = "eep"
 nom = input("Nombre: ")

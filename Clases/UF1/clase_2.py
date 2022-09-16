@@ -71,7 +71,7 @@ var: complex = 1j
 var: tuple = (1, 2)  # No se pueden modificar
 var = [1, 2]  # array
 var: bool = True  # o False
-var: dict = ["key:value"]
+var: dict = {"key": "value"}
 
 # RECORDEMOS
 
@@ -108,10 +108,8 @@ var = input("Pon tus datos: ")
 # Empezamos con los condicionales sin IF
 
 var1 = 1
-print(var1 == 3) #Sera false porque no se cumple la condicion
-print(var1 < 10) # Esta si se cumple
-
-
+print(var1 == 3)  # Sera false porque no se cumple la condicion
+print(var1 < 10)  # Esta si se cumple
 
 """
 Estructura
