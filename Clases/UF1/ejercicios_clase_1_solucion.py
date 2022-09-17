@@ -39,7 +39,7 @@ n2: int = int(input("Numero 2: "))
 
 suma: int = n1 + n2
 resta: int = n1 - n2
-division: int = n1 / n2
+division: float = n1 / n2
 multi: int = n1 * n2
 modulo: int = n1 % n2
 

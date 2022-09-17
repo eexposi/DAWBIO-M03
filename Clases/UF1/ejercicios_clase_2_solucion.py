@@ -28,7 +28,7 @@ print(palabra * (CONSTANTE // numero))
 """
 EJERCICIO 2
 
-Pediremos al usuario horas, minutos y segundos de inicio de un evento y su duracion en minutos
+Pediremos al usuario horas y minutos de inicio de un evento y su duracion en minutos
 Calcularemos la hora exacta a la que termina el evento
 """
 
