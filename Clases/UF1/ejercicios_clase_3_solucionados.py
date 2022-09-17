@@ -68,7 +68,6 @@ elif mod == 22:
 
 print("La letra de tu DNI es: " + letra + ". Por lo que tu DNI completo es: " + str(dni) + letra)
 
-
 """
 EJERCICIO 2
 -------------

@@ -32,7 +32,6 @@ elif num > 50:
 elif num < 100:
     print("-100")
 
-
 # EJERCICIOS
 """EJERCICIO 1
 _________________
@@ -49,7 +48,6 @@ etc...
 SALIDA
 La letra de tu DNI es: X. Por lo que tu DNI completo es: XXXXXXXX-X
 """
-
 
 """
 EJERCICIO 2
