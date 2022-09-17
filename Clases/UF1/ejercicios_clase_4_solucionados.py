@@ -16,16 +16,15 @@ El programa acabara cuando elija la opcion 0.
 opc0 = "0 - Salir"
 opc1 = "1 - Opcion 1"
 opc2 = "2 - Opcion 2"
-salir = False
 
-while salir != True:
+while True:
     print(opc0)
     print(opc1)
     print(opc2)
     resposta = int(input("Elija su opcion: "))
     if resposta == 0:
-        salir = True
         print("Adios")
+        break
     elif resposta == 1:
         print("Genial, has elegido la opcion 1")
     elif resposta == 2:

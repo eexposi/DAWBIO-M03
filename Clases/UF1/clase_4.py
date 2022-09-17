@@ -114,6 +114,13 @@ print(lista)
 lista.append("e")
 print(lista)
 
+lista.insert(0, "a")
+
+lista.remove("a")
+print(lista)
+
+lista.pop(0)
+
 """Ejercicio conjunto:
 Pediremos una serie de numeros al usuario, continuados.
 Añadiremos cada numero como un int a una lista
