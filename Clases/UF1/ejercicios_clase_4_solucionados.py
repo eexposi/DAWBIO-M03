@@ -42,7 +42,7 @@ Pediremos una frase al usuario y le devolveremos el numero de caracteres totales
 Con la misma frase, eliminaremos todas las vocales, guardando la frase en una variable nueva y mostrando ambas.
 
 2.3.- 
-La misma grase, la mostraremos a la inversa:
+La misma frase, la mostraremos a la inversa:
 Ejemplo: Hola - aloH
 
 """

@@ -54,6 +54,8 @@ la mitad, no la media).
 - Mostraremos todos los valores por debajo como Suspendidos
 y por encima como aprobados.
 
+lista_original = [0, 1, 3, 7, 9, 4, 5, 5, 5, 6, 9, 10, 10, 0, 3, 4, 5, 6]
+
 SALIDA
 Lista original
 lista ordenada
