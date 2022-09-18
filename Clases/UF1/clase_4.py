@@ -121,6 +121,16 @@ print(lista)
 
 lista.pop(0)
 
+"""También podemos comprobar de una forma rapida si un elemento esta o no
+en nuestra lista"""
+
+"""in, not in de listas"""
+mi_lista = [0, 3, 12, 8, 2]
+
+print(5 in mi_lista)
+print(5 not in mi_lista)
+print(12 in mi_lista)
+
 """Ejercicio conjunto:
 Pediremos una serie de numeros al usuario, continuados.
 Añadiremos cada numero como un int a una lista

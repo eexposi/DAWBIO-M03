@@ -50,15 +50,12 @@ print(nuevaLista)
 
 """
 
-
 """in, not in de listas"""
 miLista = [0, 3, 12, 8, 2]
 
 print(5 in miLista)
 print(5 not in miLista)
 print(12 in miLista)
-
-
 
 """Ordenamiento burbuja
 
@@ -68,21 +65,19 @@ Sucesivamente hasta que no hayan mas cambios
 
 CODIGO
 """
-miLista = [8, 10, 6, 2, 4] # lista para ordenar
-swapped = True # lo necesitamos verdadero (True) para ingresar al bucle while
+miLista = [8, 10, 6, 2, 4]  # lista para ordenar
+swapped = True  # lo necesitamos verdadero (True) para ingresar al bucle while
 
 while swapped:
-    swapped = False # no hay swaps hasta ahora
+    swapped = False  # no hay swaps hasta ahora
     for i in range(len(miLista) - 1):
         if miLista[i] < miLista[i + 1]:
-            swapped= True # ocurrió el intercambio!
+            swapped = True  # ocurrió el intercambio!
             miLista[i], miLista[i + 1] = miLista[i + 1], miLista[i]
 
 print(miLista)
 
-
 """Idea de ejercicio, borrar repetidos de una lista"""
-
 
 """Rellenar datos, comprension de listas y for"""
 fila = ["PEON_BLANCO" for i in range(8)]
@@ -90,3 +85,5 @@ print(fila)
 
 cuadrados = [x ** 2 for x in range(10)]
 print(cuadrados)
+
+"""Empezar con matrices bi y tridimensionales. Recorrer todos los elementos, etc."""
