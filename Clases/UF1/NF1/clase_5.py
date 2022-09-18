@@ -38,6 +38,21 @@ print(lista2)
 lista2 = lista[2:4]
 print(lista2)
 
+import random
+
+"""
+Podemos simplificar la creación de listas
+"""
+
+fila = ["Hola" for i in range(8)]
+print(fila)
+
+cuadrados = [x ** 2 for x in range(10)]
+print(cuadrados)
+
+"""Funcion RANDOM"""
+r1 = random.randint(0, 11)  # Numeros aleatorios entre el 0 y el 10
+
 """EJERCICIO 1 - Ordenamiento por burbuja"""
 """
 NOTA: Se comparan los 2 primeros numeros y se ordenan.
