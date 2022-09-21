@@ -132,3 +132,4 @@ elif 12450 > salario >= 0:
     impuestos = salario * 0.19
 
 print("El tramo aplicable es el: " + str(tramo) + " y has de pagar: " + str(impuestos) + "€")
+print()
