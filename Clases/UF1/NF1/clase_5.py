@@ -1,4 +1,68 @@
-"""CLASE 27 septiembre de 2022"""
+
+"""
+Iteraciones con listas
+
+Una lista es un tipo de variable, solo que cada uno de sus elementos puede ser de cualquier tipo de variable, incluso otra lista
+Se recorren tal como hemos recorrido los string
+lista[0], etc
+"""
+
+lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+for i in lista:
+    print(str(i))
+
+lista = ["a", "b", "c", "d"]
+for i in lista:
+    print(str(i))
+
+lista[0] = "z"
+print(lista)
+
+"""Para añadir un nuevo elemento a la lista:
+"""
+lista.append("e")
+print(lista)
+
+lista.insert(0, "a")
+
+lista.remove("a")
+print(lista)
+
+lista.pop(0)
+
+"""También podemos comprobar de una forma rapida si un elemento esta o no
+en nuestra lista"""
+
+"""in, not in de listas"""
+mi_lista = [0, 3, 12, 8, 2]
+
+print(5 in mi_lista)
+print(5 not in mi_lista)
+print(12 in mi_lista)
+
+"""Ejercicio conjunto:
+Pediremos una serie de numeros al usuario, continuados.
+Añadiremos cada numero como un int a una lista
+Mostraremos cada numero separado por guiones
+"""
+# numeros = input("Lista de numeros: ")
+# lista_numeros =[]
+# for e in numeros:
+#     lista_numeros.append(int(e))
+# print(lista_numeros)
+
+"""EJERCICIO 3
+- Pediremos al usuario una serie de numeros y los guardaremos en una lista
+- Crearemos una nueva lista donde guardaremos la serie a la inversa
+- De la primera lista, obtendremos el numero mas grande
+- De la segunda lista, obtendremos el numero más pequeño.
+
+SALIDA
+Lista original:
+Lista inversa:
+Numero mñas pequeño: 
+Numero más grande:
+""""""CLASE 27 septiembre de 2022"""
 """
 Asignación de listas
 """
