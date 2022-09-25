@@ -29,3 +29,13 @@ Mostrar la piramide anterior de forma inversa.
 **
 *
 """
+
+"""EJERCICIO 2
+Queremos cifrar el siguiente mensaje: "ESTA PRACTICA ES MUY SENCILLA"
+La clave es la posición de las letras del abecedario
+A = 0
+B = 1
+Etc.
+
+
+"""
