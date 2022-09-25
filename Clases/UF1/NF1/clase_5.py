@@ -1,4 +1,3 @@
-
 """
 Iteraciones con listas
 

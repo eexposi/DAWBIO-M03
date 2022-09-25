@@ -114,7 +114,8 @@ print("El tramo según tu salario es el " + tramo)
 print("\nEJERCICIO 2.2:")
 if salario > 300000:
     # Tramo 6
-    impuestos = (12450 * 0.19) + (7749 * 0.24) + (14999 * 0.30) + (24599 * 0.37) + (239999 * 0.45) + (salario - 300001) * 0.47
+    impuestos = (12450 * 0.19) + (7749 * 0.24) + (14999 * 0.30) + (24599 * 0.37) + (239999 * 0.45) + (
+                salario - 300001) * 0.47
 elif 300000 >= salario > 60000:
     # Tramo 5
     impuestos = (12450 * 0.19) + (7749 * 0.24) + (14999 * 0.30) + (24599 * 0.37) + (salario - 60001) * 0.45

@@ -68,4 +68,3 @@ for i in range(tamany):
     nueva_frase += frase[contador - 1]
     contador -= 1
 print(nueva_frase)
-
