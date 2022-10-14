@@ -49,6 +49,6 @@ lst2 = [3, 1, 3, 6, 7, 0, 3, 9, 4, 5, 4, 2, 9, 2, 6, 5, 4, 2, 3, 9, 3, 4, 4, 1, 
 4.2 - Realizaremos la media de cada una, indicando el resultado y cuál tiene la media más grande.
 4.3 - Recorreremos la lista 1 y compararemos cada elemento de la lista, con el que tenga la misma posición de la otra.
  Indicando que lista posee el elemento con un valor más pequeño.
-4.5 - Ordenaremos ambas listas de la misma forma y las mostraremos una de mayor a menor y la otra al revés de forma
+4.4 - Ordenaremos ambas listas de la misma forma y las mostraremos una de mayor a menor y la otra al revés de forma
 invertida.
 """
