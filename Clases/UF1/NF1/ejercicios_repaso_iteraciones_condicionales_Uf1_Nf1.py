@@ -1,5 +1,4 @@
 """Practicas clase preparación Pt1"""
-import random
 
 """EJERCICIO 1
 - Solicitaremos al usuario un numero mayor que 1 y menor que 100. Este número serán los 
@@ -26,8 +25,6 @@ for i in range(NUM_BLOQUES):
     print("*" * i)
     contador += i
 print("Bloques usados: " + str(contador))
-
-
 
 """
 EJERCICIO 1.2
@@ -59,4 +56,3 @@ Ant
 """
 
 nombres = ["Eric", "Mariona", "Marc", "Maria"]
-
