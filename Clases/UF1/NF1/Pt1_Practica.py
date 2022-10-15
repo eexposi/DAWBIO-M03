@@ -4,7 +4,8 @@ INSTRUCCIONES:
 - No se permitirán prints innecesarios ni dentro de condicionales ni iteraciones, salvo que sean necesarios
 - No se podrán crear nuevas listas
 - No se permite el uso de metodos o funciones que no se han expuesto en clase
--
+- Se entregará 1 archivo .py en el que se ejecutarán todos los ejercicios. Indicándose cuando se inicia
+cada uno de ellos.
 """
 
 """
