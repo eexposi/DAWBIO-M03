@@ -15,7 +15,6 @@ print("tiene: "+ str(v)+ " meses.")
 
 
 """ EJERCICIO 3 """
-monto 
 
  
  
