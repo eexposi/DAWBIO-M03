@@ -89,7 +89,8 @@ lst2 = [3, 1, 3, 6, 7, 0, 3, 9, 4, 5, 4, 2, 9, 2, 6, 5, 4, 2, 3, 9, 3, 4, 4, 1, 
 4.4 - Ordenaremos ambas listas de la misma forma y las mostraremos una de mayor a menor y la otra al revés de forma
 invertida.
 
-"""long = 0
+"""
+long = 0
 for e in lista_larga:
         long += 1
 numero_mas_larga = lista_original[0]
