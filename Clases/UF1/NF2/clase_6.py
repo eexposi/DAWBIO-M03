@@ -1,4 +1,17 @@
-""" Clase 6: MATRICES o TABLAS: lista de listas """
+""" Clase 6: Contenedores de datos
+Agrupan elementos/datos variados
+(ARRAYS)
+    - String: elementos ordenados, se pueden repetir
+    - Lista: como string + son valores heterogeneos (incluso sublistas) y se pueden cambiar
+    - Tupla: como las listas pero NO SE PUEDEN CAMBIAR
+    - Matrices: estructuras de datos con filas y columnas (lista de listas)
+    - Diccionario:
+"""
+
+
+
+
+""" MATRICES o TABLAS: lista de listas """
 """ Recordar: tanto filas como columnas empiezan por el '0' """
 
 M=[[],[]]
@@ -71,6 +84,15 @@ print(M4[2][1][0])              # Printamos la posición 0 de la columna 1 de la
 # Si elegimos la opción 1, nos pedirá 2 números independientes, es decir, 2 input (fila y columna). No aceptaremos posiciones incorrectas, volviendo a pedir el dato.
 # Si la (fila,columna) contiene una 'O' --> cambiaremos la 'O' por 'X' y mostraremos la matriz con la nueva 'X'
 # Cuando todas las posiciones de la matriz tengan 'X' --> mensaje de "WINNER"
+
+
+""" EJERCICIO 2.2 --------------------------------------------------------------------"""
+# Modifica el ejercicio 2.1 para que el sistema "juegue" de manera autónoma, es decir, sin pedirle
+# valores de fila o columna al usuario.
+#
+# import random
+# random.randint()
+#
 
 
 """ EJERCICIO 3 ---------------------------------------------------------------------"""
