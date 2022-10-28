@@ -21,8 +21,19 @@ volverá al menú principal. El menú se generará con lista, no un print por op
                                                 1 - Añadir alumno
                                                 2 - Buscar alumno
                                                 3 - Añadir nota a alumno
-                                                5 - Mostrar la media de notas de alumno
-                                                7 - Borrar un alumno
+                                                4 - Mostrar la media de notas de alumno
+                                                5 - Borrar un alumno
                                                 0 - Salir
                                             Introduce opción:
 --------------------------------------------------------------------------------------------------- """
+
+menu={"   1":"Añadir alumno",
+      "   2":"Buscar alumno",
+      "   3":"Añadir nota a alumno",
+      "   4":"Mostrar la media de notas de alumno",
+      "   5":"Borrar un alumno",
+      "   0":"Salir"}
+
+print("Menú de opciones:")
+for n,opt in menu.items():
+    print(n,opt,sep=" - ")

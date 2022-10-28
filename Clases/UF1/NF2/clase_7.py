@@ -25,7 +25,7 @@ empty_dictionary = {}
 
 
 """ MUESTREO DE DICCIONARIOS -----------------------------------------------------------------------"""
-# Mostrar diccionario completo++
+# Mostrar diccionario completo
 print(dictionary)
 print(phone_numbers)
 print(empty_dictionary)
