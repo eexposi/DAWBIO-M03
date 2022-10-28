@@ -43,3 +43,31 @@ TOTAL   XXX €
 
 Y finalmente, podemos pedirle el precio unitario de un artículo concreto, hasta que el usuario decida
 terminar.                                                                                         """
+
+cesta = {}
+
+continuar = True
+while continuar:
+    item = input("Introduce un artículo: ")
+    precio = float(input("Introduce el precio de " + item + "": ""))
+    cesta[item] = precio
+    continuar = input("¿Quieres añadir artículos a la lista (Si/No)? ") == "Si"
+coste = 0
+
+print()
+print("Lista de la compra:")
+print("-------------------")
+for item, precio in cesta.items():
+    print(item)
+    coste += precio
+print("Coste total: ", coste)
+print()
+
+continuar = True
+while continuar:
+    item = input("Quieres saber el precio de algún artículo? Introduce artículo: ")
+    if item in cesta:
+        print(cesta[item])
+    else:
+        print("Este artículo no está en la cesta.")
+    continuar = input("¿Quieres saber el precio del algún otro artículo (Si/No)? ") == "Si"
