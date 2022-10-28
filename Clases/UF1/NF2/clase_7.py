@@ -25,7 +25,7 @@ empty_dictionary = {}
 
 
 """ MUESTREO DE DICCIONARIOS -----------------------------------------------------------------------"""
-# Mostrar diccionario completo
+# Mostrar diccionario completo++
 print(dictionary)
 print(phone_numbers)
 print(empty_dictionary)
@@ -49,6 +49,10 @@ for trabajador,tlf in phone_numbers.items():    # Indicamos Alias para CLAVE y V
 
 """ CAMBIO DE VALOR PARA UNA CLAVE CREADA ----------------------------------------------------------"""
 dictionary["gato"]="michu"
+print(dictionary)
+
+""" CREACIÓN DE UN NUEVO PAR DE DATOS --------------------------------------------------------------"""
+dictionary["hormiga"]="fourmi"
 print(dictionary)
 
 
