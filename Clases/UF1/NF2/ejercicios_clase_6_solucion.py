@@ -1,77 +1,128 @@
+import random
+
 """ EJERCICIO 1 ----------------------------------------------------------------------"""
-Lista = ["almacenar", 8, "a", [1, 2, 3], True, (0, 0, 1), 85.7]
+# Mediante la siguiente matriz, generar un menú de opciones:
 
-# a)
-Lista_comprobar = [85.7, 0, True, [True], [(0, 0, 1)], 85, "a", [1, 2, 3]]
-for e in Lista_comprobar:
-    if e in Lista:
-        print("El elemento " + str(e) + " esta en la lista")
-print()
+menu=[[1, "Opcion 1"], [2, "Opcion 2"], [3, "Opcion 3"], [4, "Salir"]]
 
-# b)
-print("La posicion del elemento (0,0,1) es " + str(Lista.index((0, 0, 1))))
-print()
+for i in range(len(menu)):
+    for j in range(len(menu[i])):
+        print(menu[i][j], end="-")
+    print()
 
-# c)
-Lista.remove(Lista[len(Lista) - 1])  # Tambien puede hacerse """ del L[len(L)-1] """
-print(Lista)
-print()
 
-# d)
-print("El string 'a' aparece " + str(Lista.count("a")) + " vez/veces")
-print()
+""" EJERCICIO 1.2 ----------------------------------------------------------------------"""
+# Añadir una opción más al menú, pidiendo los datos por pantalla:
+
+num=input("numero: ")
+opt=input("opción: ")
+elemento4=[num,opt]
+menu.append(elemento4)
+
+for i in range(len(menu)):
+    for j in range(len(menu[i])):
+        print(menu[i][j], end="-")
+    print()
+
 
 """ EJERCICIO 2 ----------------------------------------------------------------------"""
-# 2.1) Solicitar al usuario que introduzca números, los cuales se guardarán en una lista.
-# Finalizar al introducir el número 0, el cual no debe guardarse.
-print("2.1")
-numeros = []
-num = int(input("Introduce un numero: "))
-while num != 0:
-    numeros.append(num)
-    num = int(input("Introduce un numero: "))
-print()
+# --- Menú ---
+# 0 - Salir
+# 1 - Jugar         # Otras opciones deben dar error y volver a mostrar el menú
 
-# 2.2) A continuación, solicitar al usuario que introduzca un número y, si el número está en la lista,
-# eliminar su primera ocurrencia. Mostrar un mensaje si no es posible eliminar (no existe)
-print("2.2")
-encontrado = False
-while encontrado == False:
-    eliminar = int(input("Introduce un numero a eliminar: "))
-    if eliminar in numeros:
-        encontrado = True
-        numeros.remove(eliminar)
+# Crear manualmente una matriz tipo:
+#    O   O   O
+#    O   O   O
+#    O   O   O
+
+# Si elegimos la opción 1, nos pedirá 2 números independientes, es decir, 2 input (fila y columna). No aceptaremos posiciones incorrectas, volviendo a pedir el dato.
+# Si la (fila,columna) contiene una 'O' --> cambiaremos la 'O' por 'X' y mostraremos la matriz con la nueva 'X'
+# Cuando todas las posiciones de la matriz tengan 'X' --> mensaje de "WINNER"
+
+menu=[[0, "Salir"], [1, "Jugar"]]
+matriz=[["O","O","O"],["O","O","O"],["O","O","O"]]
+winner=0
+opt=5
+while opt != 0:
+    correcto=False
+    correcto2=False
+    if winner < 9:
+        for i in range(len(menu)):
+            for j in range(len(menu[i])):
+                print(menu[i][j], end="-")
+            print()
+        opt=int(input("Opción: "))
+
+        if opt == 1:
+            while correcto==False:
+                fila=int(input("Indícame número de fila: "))
+                if fila<0 or fila>2:
+                    print("Error. Pásame una fila correcta: ")
+                else:
+                    correcto=True
+
+            while correcto2==False:
+                columna=int(input("Indícame número de columna: "))
+                if columna<0 or columna>2:
+                    print("Error. Pásame una columna correcta: ")
+                else:
+                    correcto2=True
+            
+            if matriz[fila][columna] == "O":
+                matriz[fila][columna] = "X"
+                winner+=1
+            else:
+                print("Aquí ya hay una 'X'")
+            for i in range(len(matriz)):
+                for j in range(len(matriz[i])):
+                    print(matriz[i][j], end=" ")
+                print()
+        elif opt != 0:
+            print("Opción incorrecta!")
     else:
-        print("El número introducido no esta en la lista.")
-print()
+        print("You are the winner!")
+        break
 
-# 2.3) Imprimir la SUMA de todos los números de la lista.
-print("2.3")
-suma = 0
-for e in numeros:
-    suma = suma + e
-print("la SUMA total de los numeros es " + str(suma))
-print()
 
-# 2.4) Solicitar al usuario otro número y crear una lista con los elementos de la lista original
-# que sean menores que el número dado. Imprimir esta nueva lista, iterando por ella.
-lista_limitada = []
-limite = int(input("Filtramos numeros menores a: "))
-for e in numeros:
-    if e < limite:
-        lista_limitada.append(e)
+""" EJERCICIO 2.2 --------------------------------------------------------------------"""
+# Modifica el ejercicio 2.1 para que el sistema "juegue" de manera autónoma, es decir, sin pedirle
+# valores de fila o columna al usuario.
 
-for e in lista_limitada:
-    print(e)
+menu=[[0, "Salir"], [1, "Jugar"]]
+matriz=[["O","O","O"],["O","O","O"],["O","O","O"]]
+winner=0
+opt=5
+while opt != 0:
+    correcto=False
+    correcto2=False
+    if winner < 9:
+        for i in range(len(menu)):
+            for j in range(len(menu[i])):
+                print(menu[i][j], end="-")
+            print()
+        input("Pulsa para continuar... ")
 
-# 2.5) Generar e imprimir una nueva lista que contenga como elementos a tuplas, cada una compuesta
-# por un número de la lista original y la cantidad de veces que aparece en ella. Por ejemplo,
-# si la lista original es [4,7,12,83,7,7,12,4], la nueva lista contendrá: [(4,2), (7,3), (12,2), (83,1)]
-nueva_lista = []
-for e in numeros:
-    if (e, numeros.count(e)) not in nueva_lista:
-        nueva_lista.append((e, numeros.count(e)))  # OJO con los paréntesis, entender porqué
-print(nueva_lista)
+        while correcto==False:
+            fila=random.randint(0,2)
+            correcto=True
+
+        while correcto2==False:
+            columna=random.randint(0,2)
+            correcto2=True
+            
+        if matriz[fila][columna] == "O":
+            matriz[fila][columna] = "X"
+            winner+=1
+        else:
+            print("Aquí ya hay una 'X'")
+        for i in range(len(matriz)):
+            for j in range(len(matriz[i])):
+                print(matriz[i][j], end=" ")
+            print()
+    else:
+        print("You are the winner!")
+        break
+
 
 """ EJERCICIO 3 ----------------------------------------------------------------------"""
 # Escribir un programa que permita procesar datos de pasajeros de viaje en una lista de tuplas
@@ -94,7 +145,7 @@ pasajeros = []
 ciudades = []
 
 while True:
-    num_pasajeros = 0
+    num_pasajeros=0
 
     print()
     print("   1. Agregar pasajeros")
@@ -104,58 +155,58 @@ while True:
     print("   5. Buscar pais de destino mediante el DNI")
     print("   6. Cantidad de pasajeros que viajan a un pais")
     print("   7. Salir del programa")
-    menu = int(input("   Selecciona la opción: "))
-
+    menu=int(input("   Selecciona la opción: "))
+    
     if menu == 1:
         print()
         print("AÑADIR PASAJEROS (X para salir): ")
-        nombre = input("Introduce nombre: ")
+        nombre=input("Introduce nombre: ")
         while nombre != "X":
-            dni = input("Introduce DNI: ")
-            destino = input("Introduce destino: ")
+            dni=input("Introduce DNI: ")
+            destino=input("Introduce destino: ")
             pasajeros.append((nombre, dni, destino))
-            nombre = input("Introduce nombre: ")
+            nombre=input("Introduce nombre: ")
 
     elif menu == 2:
         print("AÑADIR CIUDADES (X para salir):")
-        ciudad = input("Introduce ciudad: ")
+        ciudad=input("Introduce ciudad: ")
         while ciudad != "X":
-            pais = input("Introduce pais: ")
+            pais=input("Introduce pais: ")
             ciudades.append((ciudad, pais))
-            ciudad = input("Introduce ciudad: ")
+            ciudad=input("Introduce ciudad: ")
 
     elif menu == 3:
         print("BUSCAR CIUDAD:")
-        dni = input("Introduce el DNI del pasajero: ")
+        dni=input("Introduce el DNI del pasajero: ")
         for viaje in pasajeros:
-            if viaje[1] == dni:
+            if viaje[1]==dni:
                 print("La ciudad destino es " + viaje[2])
 
     elif menu == 4:
         print("CANTIDAD DE PASAJEROS A CIUDAD:")
-        ciudad = input("Introduce la ciudad a buscar: ")
+        ciudad=input("Introduce la ciudad a buscar: ")
         for viaje in pasajeros:
-            if viaje[2] == ciudad:
-                num_pasajeros += 1
+            if viaje[2]==ciudad:
+                num_pasajeros+=1
         print("Viajan " + str(num_pasajeros) + " pasajeros a " + ciudad)
 
     elif menu == 5:
         print("BUSCAR PAIS:")
-        dni = input("Introduce el DNI del pasajero: ")
+        dni=input("Introduce el DNI del pasajero: ")
         for viaje in pasajeros:
-            if viaje[1] == dni:
+            if viaje[1]==dni:
                 for ciudad in ciudades:
-                    if viaje[2] == ciudad[0]:
+                    if viaje[2]==ciudad[0]:
                         print("El pais de destino es " + ciudad[1])
 
     elif menu == 6:
         print("CANTIDAD DE PASAJEROS A PAIS:")
-        pais_destino = input("Introduce el pais de destino: ")
+        pais_destino=input("Introduce el pais de destino: ")
         for pais in ciudades:
-            if pais[1] == pais_destino:
+            if pais[1]==pais_destino:
                 for viaje in pasajeros:
-                    if pais[0] == viaje[2]:
-                        num_pasajeros += 1
+                    if pais[0]==viaje[2]:
+                        num_pasajeros += 1        
         print("Viajan " + str(num_pasajeros) + " pasajeros a " + pais_destino)
 
     elif menu == 7:
@@ -163,4 +214,4 @@ while True:
         break
 
     else:
-        print("Opcion incorrecta")
+        print("Opción incorrecta.")

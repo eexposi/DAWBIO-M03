@@ -8,9 +8,6 @@ Agrupan elementos/datos variados
     - Diccionario:
 """
 
-
-
-
 """ MATRICES o TABLAS: lista de listas """
 """ Recordar: tanto filas como columnas empiezan por el '0' """
 
@@ -71,7 +68,7 @@ print(M4[2][1][0])              # Printamos la posición 0 de la columna 1 de la
 
 
 
-""" EJERCICIO 2 ----------------------------------------------------------------------"""
+""" EJERCICIO 2.1 ----------------------------------------------------------------------"""
 # --- Menú ---
 # 0 - Salir
 # 1 - Jugar         # Otras opciones deben dar error y volver a mostrar el menú
