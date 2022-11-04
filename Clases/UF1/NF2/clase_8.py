@@ -31,13 +31,14 @@ while salida == False:
 
 # ES MEJOR MANEJAR UN ERROR CUANDO OCURRE QUE TRATAR DE EVITARLO
 
-try:
-# Es un lugar donde
-# tu puedes hacer algo
-# sin pedir permiso.
-except:
-# Es un espacio dedicado
-# exclusivamente para pedir perdón.
+# try:
+#     # Es un lugar donde
+#     # tu puedes hacer algo
+#     # sin pedir permiso.
+#
+# except:
+# # Es un espacio dedicado
+# # exclusivamente para pedir perdón.
 
 # -------- OPCIÓN GENERAL
 try:
