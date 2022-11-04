@@ -61,7 +61,7 @@ print("4.5 - Ordenaremos ambas listas y las mostraremos de forma invertida.")
 hay_cambios = True
 while hay_cambios == True:
     hay_cambios = False
-    for i in range(long_lst1-1):
+    for i in range(long_lst1 - 1):
         if lst1[i] < lst1[i + 1]:
             lst1[i], lst1[i + 1] = lst1[i + 1], lst1[i]
             hay_cambios = True
@@ -69,10 +69,9 @@ while hay_cambios == True:
 hay_cambios = True
 while hay_cambios == True:
     hay_cambios = False
-    for i in range(long_lst2-1):
+    for i in range(long_lst2 - 1):
         if lst2[i] < lst2[i + 1]:
             lst2[i], lst2[i + 1] = lst2[i + 1], lst2[i]
             hay_cambios = True
 print(lst1[:10])
 print(lst2[10::-1])
-

@@ -13,7 +13,6 @@ EJERCICIO 1
 Elaborar un programa que realice la conversión de cm. a pulgadas. Donde 1cm = 0.39737 pulgadas.
 """
 
-
 # Inicio del programa del ejercicio 1
 """
 diagonal = float(input("Introduce cuanto mide la diagonal del televisor en centimetros\n"))
@@ -25,7 +24,6 @@ EJERCICIO 2
 Obtener la edad de una persona en meses, si se introduce su edad en años y meses. Ejemplo: Introducimos 3 años 4 meses
 debe mostrar: 40 meses.
 """
-
 
 # Inicio del programa del ejercicio 2
 """
@@ -51,7 +49,6 @@ menores del grupo se ha de indicar para obtener el precio final.
 El programa mostrará el importe total a pagar para los mayores de edad, el importe a pagar para los menores de edad y 
 el importe total del grupo.
 """
-
 
 # Inicio del programa de ejercicio 3
 
@@ -99,7 +96,6 @@ lst2 = [3, 1, 3, 6, 7, 0, 3, 9, 4, 5, 4, 2, 9, 2, 6, 5, 4, 2, 3, 9, 3, 4, 4, 1, 
 invertida.
 """
 
-
 # Inicio del programa del ejercicio 4
 
 lst1 = [3, 8, 6, 5, 7, 7, 2, 7, 7, 10, 3, 4, 3, 1, 3, 6, 6, 5, 5, 6, 8, 3, 4, 8, 1, 10, 4, 9, 9, 7, 4, 10, 5, 0, 0, 2,
@@ -108,11 +104,6 @@ lst1 = [3, 8, 6, 5, 7, 7, 2, 7, 7, 10, 3, 4, 3, 1, 3, 6, 6, 5, 5, 6, 8, 3, 4, 8,
 lst2 = [3, 1, 3, 6, 7, 0, 3, 9, 4, 5, 4, 2, 9, 2, 6, 5, 4, 2, 3, 9, 3, 4, 4, 1, 4, 10, 1, 6, 9, 1, 1, 2, 9, 3, 7, 7, 2,
         5, 1, 4, 7, 6, 10, 8, 6, 0, 8, 5, 6, 5, 3, 6, 3, 7, 9, 5, 6, 0, 8, 5, 10, 10, 4, 4, 3, 10, 5, 8, 2, 8, 9, 10, 2,
         0, 10, 7, 0, 1, 6, 2, 2, 7, 9, 5, 7, 6, 9, 2, 6, 1, 8, 0, 6, 3, 8, 1, 7, 2, 0]
-
-
-
-
-
 
 ###################################### Ejercicio 4.1 #######################################
 """
@@ -124,12 +115,6 @@ elif len(lst1) < len(lst2):
 elif len(lst1) == len(lst2):
         print("-Las dos listas son igual de largas\n")
 """
-
-
-
-
-
-
 
 ###################################### Ejercicio 4.2 #######################################
 """
@@ -162,7 +147,6 @@ elif media_lst1 == media_lst2:
 
 """
 
-
 ################################### Ejercicio 4.3 #######################################
 """
 #Determinamos el número de vueltas con la longitud de la lista mas corta
@@ -188,8 +172,6 @@ while iterador < vueltas:
         iterador += 1
 
 """
-
-
 
 ################################### Ejercicio 4.4 #######################################
 """

@@ -12,18 +12,17 @@ cada uno de ellos.
 EJERCICIO 1
 Elaborar un programa que realice la conversión de cm. a pulgadas. Donde 1cm = 0.39737 pulgadas.
 """
-length= int(input("Indique la distancia en centimetros:  "))
-print(length*0.39737)
+length = int(input("Indique la distancia en centimetros:  "))
+print(length * 0.39737)
 """
 EJERCICIO 2
 Obtener la edad de una persona en meses, si se introduce su edad en años y meses. Ejemplo: Introducimos 3 años 4 meses
 debe mostrar: 40 meses.
 """
-edad= int(input("Indique su edad en anos: "))
-print(edad*12)
-anos_meses= int(input("Indique las meses de su edad que estan falta aparte de anos: "))
-print((edad*12)+anos_meses)
-
+edad = int(input("Indique su edad en anos: "))
+print(edad * 12)
+anos_meses = int(input("Indique las meses de su edad que estan falta aparte de anos: "))
+print((edad * 12) + anos_meses)
 
 """
 EJERCICIO 3
@@ -41,22 +40,22 @@ menores del grupo se ha de indicar para obtener el precio final.
 El programa mostrará el importe total a pagar para los mayores de edad, el importe a pagar para los menores de edad y 
 el importe total del grupo.
 """
-n0= int(input("Indique el numero de persones: "))
-n1= int(input("Indique el numero de profesor de programacio: "))
-e= int(input("Indique el numero de personas que son menores de 18: "))
-n= n0-n1
-if n<=10:
-    d=n*45
-    print(d-(e*0.15))
+n0 = int(input("Indique el numero de persones: "))
+n1 = int(input("Indique el numero de profesor de programacio: "))
+e = int(input("Indique el numero de personas que son menores de 18: "))
+n = n0 - n1
+if n <= 10:
+    d = n * 45
+    print(d - (e * 0.15))
 elif 10 < n <= 20:
-    d= n*45
-    print(d-(d*0.1)-(e*0.15))
+    d = n * 45
+    print(d - (d * 0.1) - (e * 0.15))
 elif 20 < n <= 50:
-    d= n*45
-    print(d-(d*0.2)-(e*0.15))
+    d = n * 45
+    print(d - (d * 0.2) - (e * 0.15))
 elif n > 50:
-    d= n*45
-    print(d-(d*0.3)-(e*0.15))
+    d = n * 45
+    print(d - (d * 0.3) - (e * 0.15))
 """
 EJERCICIO 4
 Dadas las listas:

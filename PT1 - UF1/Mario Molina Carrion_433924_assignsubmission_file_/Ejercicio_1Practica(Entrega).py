@@ -1,24 +1,20 @@
-#EJERCICIO 1
+# EJERCICIO 1
 # Elaborar un programa que realice la conversión de cm. a pulgadas. Donde 1cm = 0.39737 pulgadas.
-
-from platform import java_ver
-
 
 num = int(input("Itroduzca la cantidad de cm que quiere pasa a pulgadas: "))
 p = num * 0.39737
-print("La cantidad obtenida de pulgadas son ",p, "pulgadas")
+print("La cantidad obtenida de pulgadas son ", p, "pulgadas")
 
-
-#EJERCICIO 2
+# EJERCICIO 2
 # Obtener la edad de una persona en meses, si se introduce su edad en años y meses. Ejemplo: Introducimos 3 años 4 meses
 # debe mostrar: 40 meses.
 
 ano = int(input("Escriba su edad en años: "))
 meses = int(input("Escriba cuantos meses han pasado desde que cumplió años por ultima vez: "))
 n = ano * 12
-print("la cantidad de meses que tiene usted es", n+meses, "meses")
+print("la cantidad de meses que tiene usted es", n + meses, "meses")
 
-#EJERCICIO 3
+# EJERCICIO 3
 # Los alumnos de 1º de DAWBIO realizaran un viaje a Port Aventura a final de curso, el precio de la entrada general es de 45€.
 # Al grupo se le aplicará un descuento dependiendo del número de alumnos:
 #   • Si alumnos > 50 --> 30%
@@ -34,38 +30,37 @@ print("la cantidad de meses que tiene usted es", n+meses, "meses")
 
 Alumnos_mayores_de_Edad = int(input("Escriba la cantidad de alumnos mayores de Edad: "))
 Alumnos_menores_de_Edad = int(input("Escriba la cantidad de Alumnos menores de Edad: "))
-Mas_de_50= 45-45*0.3
-Entre_20y50 = 45-45*0.2
-Entre_10y20 = 45-45*0.1
+Mas_de_50 = 45 - 45 * 0.3
+Entre_20y50 = 45 - 45 * 0.2
+Entre_10y20 = 45 - 45 * 0.1
 Menos_de_10 = 45
-r= 0
+r = 0
 while r < 1:
-    if Alumnos_mayores_de_Edad + Alumnos_menores_de_Edad  >= 50:
-        Todos = Alumnos_mayores_de_Edad*Mas_de_50 + Alumnos_menores_de_Edad * Mas_de_50*0.15
-        Alumnos_mayores_de_Edad = Alumnos_mayores_de_Edad*Mas_de_50
-        Alumnos_menores_de_Edad = Alumnos_menores_de_Edad * Mas_de_50*0.15
-        r=r+1
-    elif Alumnos_mayores_de_Edad + Alumnos_menores_de_Edad >= 20 <50:
-        Todos = Alumnos_mayores_de_Edad*Entre_20y50 + Alumnos_menores_de_Edad * Entre_20y50*0.15
-        Alumnos_mayores_de_Edad = Alumnos_mayores_de_Edad*Entre_20y50
-        Alumnos_menores_de_Edad = Alumnos_menores_de_Edad * Entre_20y50*0.15
-        r=r+1
-    elif Alumnos_mayores_de_Edad + Alumnos_menores_de_Edad >= 10 <20:
-        Todos = Alumnos_mayores_de_Edad*Entre_10y20 + Alumnos_menores_de_Edad * Entre_10y20*0.15
-        Alumnos_mayores_de_Edad = Alumnos_mayores_de_Edad*Entre_10y20
-        Alumnos_menores_de_Edad = Alumnos_menores_de_Edad * Entre_10y20*0.15
-        r = r+1
+    if Alumnos_mayores_de_Edad + Alumnos_menores_de_Edad >= 50:
+        Todos = Alumnos_mayores_de_Edad * Mas_de_50 + Alumnos_menores_de_Edad * Mas_de_50 * 0.15
+        Alumnos_mayores_de_Edad = Alumnos_mayores_de_Edad * Mas_de_50
+        Alumnos_menores_de_Edad = Alumnos_menores_de_Edad * Mas_de_50 * 0.15
+        r = r + 1
+    elif Alumnos_mayores_de_Edad + Alumnos_menores_de_Edad >= 20 < 50:
+        Todos = Alumnos_mayores_de_Edad * Entre_20y50 + Alumnos_menores_de_Edad * Entre_20y50 * 0.15
+        Alumnos_mayores_de_Edad = Alumnos_mayores_de_Edad * Entre_20y50
+        Alumnos_menores_de_Edad = Alumnos_menores_de_Edad * Entre_20y50 * 0.15
+        r = r + 1
+    elif Alumnos_mayores_de_Edad + Alumnos_menores_de_Edad >= 10 < 20:
+        Todos = Alumnos_mayores_de_Edad * Entre_10y20 + Alumnos_menores_de_Edad * Entre_10y20 * 0.15
+        Alumnos_mayores_de_Edad = Alumnos_mayores_de_Edad * Entre_10y20
+        Alumnos_menores_de_Edad = Alumnos_menores_de_Edad * Entre_10y20 * 0.15
+        r = r + 1
     elif Alumnos_mayores_de_Edad + Alumnos_menores_de_Edad < 10:
-        Todos = Alumnos_mayores_de_Edad*Menos_de_10 + Alumnos_menores_de_Edad * Menos_de_10*0.15
-        Alumnos_mayores_de_Edad = Alumnos_mayores_de_Edad*Menos_de_10
-        Alumnos_menores_de_Edad = Alumnos_menores_de_Edad * Menos_de_10*0.15
-        r=r+1
-print("El precio de la entrada por alumno mayor de Edad será ", Alumnos_mayores_de_Edad,"€")
-print("El precio de la entrada por alumno menor de Edad será ",Alumnos_menores_de_Edad,"€" )
-print("El precio de el grupo será",Todos,"€")
+        Todos = Alumnos_mayores_de_Edad * Menos_de_10 + Alumnos_menores_de_Edad * Menos_de_10 * 0.15
+        Alumnos_mayores_de_Edad = Alumnos_mayores_de_Edad * Menos_de_10
+        Alumnos_menores_de_Edad = Alumnos_menores_de_Edad * Menos_de_10 * 0.15
+        r = r + 1
+print("El precio de la entrada por alumno mayor de Edad será ", Alumnos_mayores_de_Edad, "€")
+print("El precio de la entrada por alumno menor de Edad será ", Alumnos_menores_de_Edad, "€")
+print("El precio de el grupo será", Todos, "€")
 
-
-#EJERCICIO 4
+# EJERCICIO 4
 # Dadas las listas:
 # lst1 = [3, 8, 6, 5, 7, 7, 2, 7, 7, 10, 3, 4, 3, 1, 3, 6, 6, 5, 5, 6, 8, 3, 4, 8, 1, 10, 4, 9, 9, 7, 4, 10, 5, 0, 0, 2,
 #         0, 1, 5, 1, 2, 4, 4, 5, 3, 2, 6, 4, 10, 9, 4, 6, 2, 1, 3, 4, 7, 0, 2, 10, 5, 3, 1, 10, 6, 3, 7, 5, 5, 1, 5, 3,
@@ -94,17 +89,14 @@ while hay_cambios:
         if lista_ordenada[i] > lista_ordenada[i + 1]:
             hay_cambios = True
             lista_ordenada[i], lista_ordenada[i + 1] = lista_ordenada[i + 1], lista_ordenada[i]
-        
-        
+
 # Calculamos el valor medio
 punto_medio = len(lista_gauss) // 2
-
 
 print("Lista 1 original: " + str(lst1))
 print("Lista 1 ordenada: " + str(lista_ordenada))
 print("Lista 1 gauss: " + str(lista_gauss))
 print("El valor medio de la lista 1 es: " + str(lista_gauss[punto_medio]))
-
 
 # Creamos lista original
 lst2 = [3, 1, 3, 6, 7, 0, 3, 9, 4, 5, 4, 2, 9, 2, 6, 5, 4, 2, 3, 9, 3, 4, 4, 1, 4, 10, 1, 6, 9, 1, 1, 2, 9, 3, 7, 7, 2,
@@ -121,13 +113,8 @@ while hay_cambios:
             hay_cambios = True
             lista_ordenada2[i], lista_ordenada2[i + 1] = lista_ordenada2[i + 1], lista_ordenada2[i]
 
-
-
 # Calculamos el valor medio
 punto_medio2 = len(lista_gauss) // 2
-
-
-
 
 if punto_medio > punto_medio2:
     punto_medio = punto_medio
@@ -144,5 +131,5 @@ if lista_gauss[punto_medio] > lista_gauss[punto_medio2]:
 elif lista_gauss[punto_medio] < lista_gauss[punto_medio2]:
     lista_gauss[punto_medio] = lista_gauss[punto_medio2]
 elif lista_gauss[punto_medio] == lista_gauss[punto_medio2]:
-   lista_gauss[punto_medio]=lista_gauss[punto_medio2]
+    lista_gauss[punto_medio] = lista_gauss[punto_medio2]
 print("El punto medio más grande es", lista_gauss[punto_medio])

@@ -11,52 +11,47 @@ Agrupan elementos/datos variados
 """ MATRICES o TABLAS: lista de listas """
 """ Recordar: tanto filas como columnas empiezan por el '0' """
 
-M=[[],[]]
-M=[[1,2],[3,4]]
+M = [[], []]
+M = [[1, 2], [3, 4]]
 print(M)
-print(M[0])                     # Printamos la fila 0 [1,2]
-print(M[1])                     # Printamos la fila 1 [3,4]
-print(M[0][1])                  # Printamos la columna 1 de la fila 0 --> 2
-print(M[1][0])                  # Printamos la columna 0 de la fila 1 --> 3
+print(M[0])  # Printamos la fila 0 [1,2]
+print(M[1])  # Printamos la fila 1 [3,4]
+print(M[0][1])  # Printamos la columna 1 de la fila 0 --> 2
+print(M[1][0])  # Printamos la columna 0 de la fila 1 --> 3
 
+M2 = [[1, 2, 3], [4, 5, 6, 12], [7, 8, 9]]
+print(M2[1])  # Printamos la fila 1 [4,5,6]
+print(M2[1][2])  # Printamos la columna 2 de la fila 1 --> 6
+print(len(M2))  # ¿Cuántos valores tiene la matriz?
 
-M2=[[1,2,3],[4,5,6,12],[7,8,9]]
-print(M2[1])                    # Printamos la fila 1 [4,5,6]
-print(M2[1][2])                 # Printamos la columna 2 de la fila 1 --> 6
-print(len(M2))                  # ¿Cuántos valores tiene la matriz?
+for i in range(0, 3):  # Recorremos filas
+    for j in range(0, 3):  # Recorremos todas las columnas de cada fila
+        print(M2[i][j])  # Printamos todos los valores
+M2[1][1] = 10  # Modificamos el valor de la posición [1][1] --> Antes: 5
 
-for i in range(0,3):              # Recorremos filas
-    for j in range(0,3):          # Recorremos todas las columnas de cada fila
-        print(M2[i][j])           # Printamos todos los valores
-M2[1][1]=10                       # Modificamos el valor de la posición [1][1] --> Antes: 5
+for i in range(0, 3):  # Si no sabemos la posición de un valor concreto
+    for j in range(0, 3):  # Recorremos la matriz buscándolo, y si lo encontramos lo cambiamos
+        if M2[i][j] == 7:
+            M2[i][j] = 0  # Cambiamos el valor 7 por 0
 
-for i in range(0,3):              # Si no sabemos la posición de un valor concreto
-    for j in range(0,3):          # Recorremos la matriz buscándolo, y si lo encontramos lo cambiamos
-        if M2[i][j]==7:
-            M2[i][j]=0            # Cambiamos el valor 7 por 0
-
-for i in range(len(M2)):              # Podemos recorrer filas y columnas con len
-    for j in range(len(M2[i])):       # Si el bucle interno coge el tamaño de las filas, podemos recorrer matrices heterogéneas (tamaño irregular)
-        if M2[i][j]==7:
-            M2[i][j]=0
+for i in range(len(M2)):  # Podemos recorrer filas y columnas con len
+    for j in range(len(M2[
+                           i])):  # Si el bucle interno coge el tamaño de las filas, podemos recorrer matrices heterogéneas (tamaño irregular)
+        if M2[i][j] == 7:
+            M2[i][j] = 0
         print(M2[i][j])
 
+M3 = [[1, "A", 0.5, "Eric"], [2, "B", 3.9, "Javi"], [3, "C", 100, "Pepe"]]
+print(M3[1][3])  # Printamos la columna 3 de la fila 1 --> Javi
+print(M3[2][2])  # Printamos la columna 2 de la fila 2 --> 100
 
-M3=[[1,"A", 0.5, "Eric"], [2, "B", 3.9, "Javi"], [3, "C", 100, "Pepe"]]
-print(M3[1][3])                   # Printamos la columna 3 de la fila 1 --> Javi
-print(M3[2][2])                   # Printamos la columna 2 de la fila 2 --> 100
+M4 = [[(1, 2), (3, 4), (5, 6)], [(7, 8), (9, 10), (11, 12)], [(13, 14), (15, 16), (17, 18)]]
+# Estructura:
+# (1,2)    (3,4)    (5,6)
+# (7,8)    (9,10)   (11,12)
+# (13,14)  (15,16)  (17,18)
 
-
-M4=[[(1,2),(3,4),(5,6)],[(7,8),(9,10),(11,12)],[(13,14),(15,16),(17,18)]]
-    # Estructura:
-        # (1,2)    (3,4)    (5,6)
-        # (7,8)    (9,10)   (11,12)
-        # (13,14)  (15,16)  (17,18)
-
-print(M4[2][1][0])              # Printamos la posición 0 de la columna 1 de la fila 2
-
-
-
+print(M4[2][1][0])  # Printamos la posición 0 de la columna 1 de la fila 2
 
 """ EJERCICIO 1.1 ------------------------------------------------------------------------------ """
 # 1) Mediante la siguiente matriz, generar un menú de opciones:
@@ -65,7 +60,6 @@ print(M4[2][1][0])              # Printamos la posición 0 de la columna 1 de la
 
 """ EJERCICIO 1.2 ------------------------------------------------------------------------------ """
 # Añadir una opción más al menú de opciones, pidiendo ambos datos al usuario.
-
 
 
 """ EJERCICIO 2.1 ----------------------------------------------------------------------"""

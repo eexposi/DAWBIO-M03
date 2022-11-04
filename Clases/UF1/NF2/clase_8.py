@@ -4,40 +4,40 @@
 
 # CUANDO EL DATO NO ES CORRECTO:
 value = int(input('Ingresa un número natural: '))
-print("El recíproco de", value, "es", 1/value)
+print("El recíproco de", value, "es", 1 / value)
 
-                # SI INTRODUCIMOS UN VALOR NO INT...
-                """ Traceback (most recent call last):
-                  File "code.py", line 1, in 
-                    value = int(input('Ingresa un número natural: '))
-                ValueError: invalid literal for int() with base 10: ''          <-- ValueError
-                """
-                # SI INTRODUCIMOS EL VALOR 0...
-                """ Traceback (most recent call last):
-                  File "main.py", line 2, in <module>
-                    print("El recíproco de", value, "es", 1/value)
-                ZeroDivisionError: division by zero                             <-- ZeroDivisionError
-                """
+# SI INTRODUCIMOS UN VALOR NO INT...
+""" Traceback (most recent call last):
+  File "code.py", line 1, in 
+    value = int(input('Ingresa un número natural: '))
+ValueError: invalid literal for int() with base 10: ''          <-- ValueError
+"""
+# SI INTRODUCIMOS EL VALOR 0...
+""" Traceback (most recent call last):
+  File "main.py", line 2, in <module>
+    print("El recíproco de", value, "es", 1/value)
+ZeroDivisionError: division by zero                             <-- ZeroDivisionError
+"""
 
 # PODEMOS INTENTAR EVITAR EL ERROR, PERO PYTHON NO RECOMIENDA TRABAJAR ASÍ...
-salida=False
-while salida==False:
+salida = False
+while salida == False:
     value = int(input('Ingresa un número natural: '))
-    if type(value) is INT:
-        print("El recíproco de", value, "es", 1/value)
-        salida=True
+    if type(value) is int:
+        print("El recíproco de", value, "es", 1 / value)
+        salida = True
     else:
         print("El valor introducido no es INT.")
 
 # ES MEJOR MANEJAR UN ERROR CUANDO OCURRE QUE TRATAR DE EVITARLO
 
 try:
-	# Es un lugar donde
-	# tu puedes hacer algo
-    # sin pedir permiso.
+# Es un lugar donde
+# tu puedes hacer algo
+# sin pedir permiso.
 except:
-	# Es un espacio dedicado
-    # exclusivamente para pedir perdón.
+# Es un espacio dedicado
+# exclusivamente para pedir perdón.
 
 # -------- OPCIÓN GENERAL
 try:
@@ -49,7 +49,7 @@ except:
 # -------- OPCIÓN ESPECÍFICA SEGÚN EL TIPO DE ERROR
 try:
     value = input('Ingresa un número natural: ')
-    print('El recíproco de', value, 'es', 1/int(value))
+    print('El recíproco de', value, 'es', 1 / int(value))
 except ValueError:
     print('No se que hacer con', value)
 except ZeroDivisionError:
@@ -59,9 +59,8 @@ except Exception as e:
     # ... PRINTA EL MENSAJE DE ERROR ... #
     print(e)
 
-except:                                                                     # <-- POR DEFECTO, siempre el último except
+except:  # <-- POR DEFECTO, siempre el último except
     print('Ha sucedido algo extraño, ¡lo siento!')
-
 
 """ TIPOS DE ERROR:
 ZeroDivisionError: cuando el divisor de una operación es 0 (/, // y %).
@@ -85,10 +84,9 @@ elif temperature < 0:
 else:
     print("Cero")
 
-                    # LENGUAJE INTERPRETADO          vs           # LENGUAJE COMPILADO
+    # LENGUAJE INTERPRETADO          vs           # LENGUAJE COMPILADO
 
 """ DEPURACIÓN POR IMPRESIÓN: uso de banderillas, marcas de paso """
-
 
 # EJERCICIOS CLASE 8
 # Para todos los ejercicios, controlar todos los posibles errores vía TRY-EXCEPT.

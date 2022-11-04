@@ -12,20 +12,19 @@ moneda 2 <--> símbolo 2
 moneda nueva <--> símbolo nuevo
 --------------------------------------------------------------------------------------------------- """
 
-monedas = {'Euro':'€', 'Dollar':'$', 'Yen':'¥'}
+monedas = {'Euro': '€', 'Dollar': '$', 'Yen': '¥'}
 moneda = input("Introduce una divisa: ")
 if moneda in monedas:
     print(monedas[moneda])
 else:
-    simbolo=input("La divisa no está. Cómo se simboliza? ")
-    monedas[moneda]=simbolo
+    simbolo = input("La divisa no está. Cómo se simboliza? ")
+    monedas[moneda] = simbolo
 
 print()
 print("MONEDA <--> SIMBOLO")
 print("-------------------")
-for moneda,simbolo in monedas.items():
-    print(moneda,simbolo,sep=' <--> ')
-
+for moneda, simbolo in monedas.items():
+    print(moneda, simbolo, sep=' <--> ')
 
 """ EJERCICIO 2 -----------------------------------------------------------------------------------
 Escribir un programa que cree un diccionario simulando una cesta de la compra. El programa debe 

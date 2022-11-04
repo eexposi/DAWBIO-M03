@@ -17,12 +17,10 @@
     # - Entre CLAVE:VALOR usamos dos puntos ":"
 ----------------------------------------------------------------------------------------------------"""
 
-
 """ DEFINICIÓN DE DICCIONARIOS ---------------------------------------------------------------------"""
-dictionary = {"gato" : "chat", "perro" : "chien", "caballo" : "cheval"}
+dictionary = {"gato": "chat", "perro": "chien", "caballo": "cheval"}
 phone_numbers = {'jefe': 5551234567, 'Suzy': 22657854310}
 empty_dictionary = {}
-
 
 """ MUESTREO DE DICCIONARIOS -----------------------------------------------------------------------"""
 # Mostrar diccionario completo
@@ -34,7 +32,7 @@ print(empty_dictionary)
 print(dictionary["gato"])
 print(phone_numbers["jefe"])
 
-for i in phone_numbers:                   # El muestreo por índice sólo muestra las CLAVES
+for i in phone_numbers:  # El muestreo por índice sólo muestra las CLAVES
     print(i)
 
 """ for e in range(len(phone_numbers)):     # El recorrido de los elementos NO FUNCIONA!
@@ -43,21 +41,19 @@ for i in phone_numbers:                   # El muestreo por índice sólo muestr
 for clave in dictionary:
     print(clave, dictionary[clave], sep=' - ')  # Mostramos CLAVE --> VALOR
 
-for trabajador,tlf in phone_numbers.items():    # Indicamos Alias para CLAVE y VALOR
+for trabajador, tlf in phone_numbers.items():  # Indicamos Alias para CLAVE y VALOR
     print(trabajador, "-->", tlf)
 
-
 """ CAMBIO DE VALOR PARA UNA CLAVE CREADA ----------------------------------------------------------"""
-dictionary["gato"]="michu"
+dictionary["gato"] = "michu"
 print(dictionary)
 
 """ CREACIÓN DE UN NUEVO PAR DE DATOS --------------------------------------------------------------"""
-dictionary["hormiga"]="fourmi"
+dictionary["hormiga"] = "fourmi"
 print(dictionary)
 
-
 """ CREACIÓN DE UN DICCIONARIO DE LISTAS -----------------------------------------------------------"""
-usuarios = {"nombres":[], "identificaciones":[]}
+usuarios = {"nombres": [], "identificaciones": []}
 nombre = ""
 i = 0
 
@@ -72,15 +68,13 @@ while nombre != "X":
 
     # La segunda lista es para las identificaciones
     usuarios["identificaciones"].append(identificacion)
-    i+=1
+    i += 1
 
 # Ahora mostremos los valores en el diccionario
-for i in range(len(usuarios["nombres"])-1):
+for i in range(len(usuarios["nombres"]) - 1):
     print("Mostrando los datos de la persona", i + 1)
     print("Nombre:", usuarios["nombres"][i])
     print("Identificación:", usuarios["identificaciones"][i])
-
-
 
 """ EJERCICIO 1 ------------------------------------------------------------------------------------
 Escribir un programa que guarde en una variable el diccionario {'Euro':'€', 'Dollar':'$', 'Yen':'¥'}, 
@@ -95,8 +89,6 @@ moneda 2 <--> símbolo 2
 ...
 moneda nueva <--> símbolo nuevo
 ------------------------------------------------------------------------------------------------"""
-
-
 
 """ EJERCICIO 2 -----------------------------------------------------------------------------------
 Escribir un programa que cree un diccionario simulando una cesta de la compra. El programa debe 

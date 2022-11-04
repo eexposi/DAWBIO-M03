@@ -48,22 +48,22 @@ el importe total del grupo.
 num_alumnos = int(input("Número de alumnos: "))
 num_menores = int(input("Dime cuantós alumnos son menores de edad: "))
 descuento = ""
-entrada = 45 
-
+entrada = 45
 
 if num_alumnos > 50:
-        descuento = entrada - (entrada * 0.3)
+    descuento = entrada - (entrada * 0.3)
 elif num_alumnos >= 20 and num_alumnos <= 50:
-        descuento = entrada - (entrada * 0.20)
+    descuento = entrada - (entrada * 0.20)
 elif num_alumnos >= 10 and num_alumnos <= 20:
-        descuento = entrada - (entrada * 0.10)
+    descuento = entrada - (entrada * 0.10)
 elif num_alumnos < 10:
-        descuento = entrada
+    descuento = entrada
 print("Los alumnos mayores de 18 años tienen que pagar: " + str(descuento) + " euros cada uno.")
 
 descuento2 = descuento - (entrada * 0.15)
-     
-print("Hay " + str(num_menores) + " alumnes menores de edad. Los alumnos menores de edad tienen que pagar: " + str(descuento2) + " euros cada uno.")
+
+print("Hay " + str(num_menores) + " alumnes menores de edad. Los alumnos menores de edad tienen que pagar: " + str(
+    descuento2) + " euros cada uno.")
 
 total = (descuento * (num_alumnos - num_menores)) + (descuento2 * num_menores)
 print("El grupo tiene que pagar en total: " + str(total) + " euros.")
@@ -88,17 +88,17 @@ lst2 = [3, 1, 3, 6, 7, 0, 3, 9, 4, 5, 4, 2, 9, 2, 6, 5, 4, 2, 3, 9, 3, 4, 4, 1, 
         5, 1, 4, 7, 6, 10, 8, 6, 0, 8, 5, 6, 5, 3, 6, 3, 7, 9, 5, 6, 0, 8, 5, 10, 10, 4, 4, 3, 10, 5, 8, 2, 8, 9, 10, 2,
         0, 10, 7, 0, 1, 6, 2, 2, 7, 9, 5, 7, 6, 9, 2, 6, 1, 8, 0, 6, 3, 8, 1, 7, 2, 0]
 long = 0
-for i in lst1: 
-        long += 1
-print("La list1 tiene: " +  str(long) + " elementos.")
+for i in lst1:
+    long += 1
+print("La list1 tiene: " + str(long) + " elementos.")
 long2 = 0
 for e in lst2:
-        long2 += 1
+    long2 += 1
 print("La lista2 tiene: " + str(long2) + " elementos.")
 if long > long2:
-        print("La list1 es más larga que la list2.")
+    print("La list1 es más larga que la list2.")
 else:
-        print("La list2 es más larga que la list1")
+    print("La list2 es más larga que la list1")
 """      
 
 4.2 - Realizaremos la media de cada una, indicando el resultado y cuál tiene la media más grande.
@@ -111,18 +111,16 @@ else:
 """
 contador = long
 for i in range(long):
-        
-        if lst1[0] < lst2[0]:
-            print("La list1 tiene el elemento más pequeño") 
-            
-        elif lst1[0] == lst2[0]:
-            print("Los elementos son iguales.")
-            
-        else:
-            print("La list2 tiene el elemento más pequeño.")
-            
 
-        
+    if lst1[0] < lst2[0]:
+        print("La list1 tiene el elemento más pequeño")
+
+    elif lst1[0] == lst2[0]:
+        print("Los elementos son iguales.")
+
+    else:
+        print("La list2 tiene el elemento más pequeño.")
+
 """
 4.4 - Ordenaremos ambas listas de la misma forma y las mostraremos una de mayor a menor y la otra al revés de forma
 invertida.
@@ -131,26 +129,26 @@ invertida.
 lst1_ordenada = lst1[:]
 cambios = True
 while cambios:
-        cambios = False
-        for i in range(len(lst1_ordenada) - 1):
-                if lst1_ordenada[i] > lst1_ordenada[i + 1]:
-                        cambios = True
-                        lst1_ordenada[i], lst1_ordenada[i + 1] = lst1_ordenada[i + 1], lst1_ordenada[i]
+    cambios = False
+    for i in range(len(lst1_ordenada) - 1):
+        if lst1_ordenada[i] > lst1_ordenada[i + 1]:
+            cambios = True
+            lst1_ordenada[i], lst1_ordenada[i + 1] = lst1_ordenada[i + 1], lst1_ordenada[i]
 
 lst2_ordenada = lst2[:]
 cambios = True
 while cambios:
-        cambios = False
-        for e in range(len(lst2_ordenada) -1):
-                if lst2_ordenada[e] > lst2_ordenada[e +1]:
-                        cambios = True
-                        lst2_ordenada[e], lst2_ordenada[e +1] = lst2_ordenada[e + 1], lst2_ordenada[e]
+    cambios = False
+    for e in range(len(lst2_ordenada) - 1):
+        if lst2_ordenada[e] > lst2_ordenada[e + 1]:
+            cambios = True
+            lst2_ordenada[e], lst2_ordenada[e + 1] = lst2_ordenada[e + 1], lst2_ordenada[e]
 
 contador = long2
 lst2_inversa = []
 for i in range(long2):
-        lst2_inversa.append(lst2_ordenada[contador - 1])
-        contador -= 1
-        
+    lst2_inversa.append(lst2_ordenada[contador - 1])
+    contador -= 1
+
 print(lst1_ordenada)
 print(lst2_inversa)

@@ -14,20 +14,20 @@ Elaborar un programa que realice la conversión de cm. a pulgadas. Donde 1cm = 0
 """
 pulg = int(input("Introduce el numero en pulgades: "))
 
-cm = pulg*0.39737
+cm = pulg * 0.39737
 
-print (cm)
+print(cm)
 
 """
 EJERCICIO 2
 Obtener la edad de una persona en meses, si se introduce su edad en años y meses. Ejemplo: Introducimos 3 años 4 meses
 debe mostrar: 40 meses.
 """
-años= int(input("introduce tu edad: "))
+años = int(input("introduce tu edad: "))
 meses = int(input("Introduce tu edad: "))
 
 tiempo_total_meses = (años * 12)
-print (meses+tiempo_total_meses)
+print(meses + tiempo_total_meses)
 
 """
 EJERCICIO 3
@@ -51,21 +51,21 @@ cuantas_personas_son_mayor_de_edat = int(input("cuantas personas son mayores: ")
 cuantas_personas_son_menor_de_edat = int(input("cuantas personas son menores: "))
 
 if cantidat_de_personas >= 50:
-        precio = (30 % 45)
+    precio = (30 % 45)
 elif cantidat_de_personas > 20 or 50:
-        precio = (20 % 45)
+    precio = (20 % 45)
 elif cantidat_de_personas > 10 or 20:
-        precio = (10 % 45)
+    precio = (10 % 45)
 elif cantidat_de_personas < 10:
-        precio = (0 % 45)
+    precio = (0 % 45)
 elif cuantas_personas_son_mayor_de_edat > 18:
-        precio = (15 % 45)
+    precio = (15 % 45)
 elif cuantas_personas_son_menor_de_edat < 18:
-        precio = (0 % 45)
+    precio = (0 % 45)
 
-print( cantidat_de_personas * precio)
-print( cuantas_personas_son_mayor_de_edat * cantidat_de_personas)
-print( cuantas_personas_son_menor_de_edat * precio )
+print(cantidat_de_personas * precio)
+print(cuantas_personas_son_mayor_de_edat * cantidat_de_personas)
+print(cuantas_personas_son_menor_de_edat * precio)
 """
 EJERCICIO 4
 Dadas las listas:
@@ -94,10 +94,10 @@ lst2 = [3, 1, 3, 6, 7, 0, 3, 9, 4, 5, 4, 2, 9, 2, 6, 5, 4, 2, 3, 9, 3, 4, 4, 1, 
         5, 1, 4, 7, 6, 10, 8, 6, 0, 8, 5, 6, 5, 3, 6, 3, 7, 9, 5, 6, 0, 8, 5, 10, 10, 4, 4, 3, 10, 5, 8, 2, 8, 9, 10, 2,
         0, 10, 7, 0, 1, 6, 2, 2, 7, 9, 5, 7, 6, 9, 2, 6, 1, 8, 0, 6, 3, 8, 1, 7, 2, 0]
 
-if len (lst1) > len (lst2):
-        print("La lista 1 es mas grande que la lista 2")
+if len(lst1) > len(lst2):
+    print("La lista 1 es mas grande que la lista 2")
 else:
-        print("La lista 2 es mas grande que la lista 1")
+    print("La lista 2 es mas grande que la lista 1")
 """
 4.2
 """
@@ -108,6 +108,3 @@ lst1 = [3, 8, 6, 5, 7, 7, 2, 7, 7, 10, 3, 4, 3, 1, 3, 6, 6, 5, 5, 6, 8, 3, 4, 8,
 lst2 = [3, 1, 3, 6, 7, 0, 3, 9, 4, 5, 4, 2, 9, 2, 6, 5, 4, 2, 3, 9, 3, 4, 4, 1, 4, 10, 1, 6, 9, 1, 1, 2, 9, 3, 7, 7, 2,
         5, 1, 4, 7, 6, 10, 8, 6, 0, 8, 5, 6, 5, 3, 6, 3, 7, 9, 5, 6, 0, 8, 5, 10, 10, 4, 4, 3, 10, 5, 8, 2, 8, 9, 10, 2,
         0, 10, 7, 0, 1, 6, 2, 2, 7, 9, 5, 7, 6, 9, 2, 6, 1, 8, 0, 6, 3, 8, 1, 7, 2, 0]
-
-
-

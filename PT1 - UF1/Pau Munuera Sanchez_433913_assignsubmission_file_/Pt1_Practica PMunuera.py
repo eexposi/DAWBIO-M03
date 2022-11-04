@@ -15,7 +15,7 @@ Elaborar un programa que realice la conversión de cm. a pulgadas. Donde 1cm = 0
 print("Ejercicio 1 :")
 n = int(input("Introduce un numero : "))
 n2 = 0.39737
-print(n,"cm son", n*n2, "pulgadas")
+print(n, "cm son", n * n2, "pulgadas")
 
 """
 EJERCICIO 2
@@ -25,7 +25,7 @@ debe mostrar: 40 meses.
 print("\nEjercicio 2 :")
 n = int(input("Intrduce tu edad : "))
 n2 = int(input("introduce los meses pasados despues de tu ultimo aniversario : "))
-print(" Tu edad es ",n*12+n2, "meses")
+print(" Tu edad es ", n * 12 + n2, "meses")
 
 """
 EJERCICIO 3
@@ -44,21 +44,21 @@ El programa mostrará el importe total a pagar para los mayores de edad, el impo
 el importe total del grupo.
 """
 print("\nEjercicio 3")
-alum_t=int(input("Introduce los alumnos que van al viaje : "))
-alum_m=int(input("Introduce los alumnos menores de 18 : "))
+alum_t = int(input("Introduce los alumnos que van al viaje : "))
+alum_m = int(input("Introduce los alumnos menores de 18 : "))
 n = 45
-alum_18 = alum_t-alum_m
+alum_18 = alum_t - alum_m
 if alum_t > 50:
-        precio = ((alum_t-alum_m)*n) * 0.3
+    precio = ((alum_t - alum_m) * n) * 0.3
 elif alum_t < 50 and alum_t > 20:
-        precio = ((alum_t-alum_m)*n) * 0.2
+    precio = ((alum_t - alum_m) * n) * 0.2
 elif alum_t < 20 and alum_t > 10:
-        precio = ((alum_t-alum_m)*n) * 0.1
+    precio = ((alum_t - alum_m) * n) * 0.1
 elif alum_t < 10:
-        precio = (alum_t-alum_m)*n
-print(" El precio de los mayores  es " + str(precio) + "€")  
-print(" El precio de los menores es ", (alum_m*45)*0.15, "€")
-print(" El precio total es " ,precio + ((alum_m*45)*0.15), "€")
+    precio = (alum_t - alum_m) * n
+print(" El precio de los mayores  es " + str(precio) + "€")
+print(" El precio de los menores es ", (alum_m * 45) * 0.15, "€")
+print(" El precio total es ", precio + ((alum_m * 45) * 0.15), "€")
 """
 EJERCICIO 4
 Dadas las listas:
@@ -86,19 +86,18 @@ lst2 = [3, 1, 3, 6, 7, 0, 3, 9, 4, 5, 4, 2, 9, 2, 6, 5, 4, 2, 3, 9, 3, 4, 4, 1, 
 lista_ordenada1 = lst1[:]
 cambios = True
 while cambios:
-        cambios = False
-        for i in range(len(lista_ordenada1) - 1):
-         if lista_ordenada1[i] > lista_ordenada1[i + 1]:
+    cambios = False
+    for i in range(len(lista_ordenada1) - 1):
+        if lista_ordenada1[i] > lista_ordenada1[i + 1]:
             cambios = True
             lista_ordenada1[i], lista_ordenada1[i + 1] = lista_ordenada1[i + 1], lista_ordenada1[i]
 lista_ordenada2 = lst2[:]
 cambios = True
 while cambios:
-        cambios = False
-        for i in range(len(lista_ordenada2) - 1):
-         if lista_ordenada2[i] < lista_ordenada2[i + 1]:
+    cambios = False
+    for i in range(len(lista_ordenada2) - 1):
+        if lista_ordenada2[i] < lista_ordenada2[i + 1]:
             cambios = True
             lista_ordenada2[i], lista_ordenada2[i + 1] = lista_ordenada2[i + 1], lista_ordenada2[i]
 print("Lista ordenada1: " + str(lista_ordenada1))
 print("Lista ordenada2: " + str(lista_ordenada2))
-

@@ -28,13 +28,13 @@ volverá al menú principal. El menú se generará con lista, no un print por op
 --------------------------------------------------------------------------------------------------- """
 
 menu = {
-      "   0":"Salir",
-      "   1":"Añadir alumno",
-      "   2":"Buscar alumno",
-      "   3":"Añadir nota a alumno",
-      "   4":"Mostrar la media de notas de alumno",
-      "   5":"Borrar un alumno"}
+    "   0": "Salir",
+    "   1": "Añadir alumno",
+    "   2": "Buscar alumno",
+    "   3": "Añadir nota a alumno",
+    "   4": "Mostrar la media de notas de alumno",
+    "   5": "Borrar un alumno"}
 
 print("Menú de opciones:")
-for n,opt in menu.items():
-    print(n,opt,sep=" - ")
+for n, opt in menu.items():
+    print(n, opt, sep=" - ")

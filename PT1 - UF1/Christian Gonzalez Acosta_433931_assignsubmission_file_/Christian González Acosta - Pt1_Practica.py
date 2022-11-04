@@ -15,7 +15,7 @@ Elaborar un programa que realice la conversión de cm. a pulgadas. Donde 1cm = 0
 print("Inicio del ejercicio 1.\n")
 
 cm = int(input("Índica los centímetros que deseas convertir a pulgadas: "))
-print(f"{cm} son {cm*0.39737}")
+print(f"{cm} son {cm * 0.39737}")
 
 """
 EJERCICIO 2
@@ -26,8 +26,7 @@ print("\nInicio del ejercicio 2.\n")
 years = int(input("Índica los años: "))
 months = int(input("Índica los meses: "))
 
-
-print(f"Tienes {months + (years*12)} meses.")
+print(f"Tienes {months + (years * 12)} meses.")
 
 """
 EJERCICIO 3
@@ -55,17 +54,17 @@ alumnos_mayores = alumnos - menores
 descuento = 0
 
 if alumnos >= 10 and alumnos < 20:
-        descuento = 0.90
-        # descuento_menores = 0.75
+    descuento = 0.90
+    # descuento_menores = 0.75
 elif alumnos >= 20 and alumnos < 50:
-        descuento = 0.80
-        # descuento_menores = 0.65
+    descuento = 0.80
+    # descuento_menores = 0.65
 elif alumnos >= 50:
-        descuento = 0.70
-        # descuento_menores = 0.55
+    descuento = 0.70
+    # descuento_menores = 0.55
 else:
-        descuento = 1
-        # descuento_menores = 0.85
+    descuento = 1
+    # descuento_menores = 0.85
 
 precio_mayores = alumnos_mayores * 45 * descuento
 precio_menores = menores * 45 * 0.85
@@ -73,7 +72,6 @@ precio_menores = menores * 45 * 0.85
 total_entradas = precio_mayores + precio_menores
 
 print(f"El total de las entradas asciende a {total_entradas} €")
-
 
 """
 EJERCICIO 4
@@ -106,21 +104,21 @@ lst1_lenght = 0
 lst2_lenght = 0
 
 for i in lst1:
-        lst1_lenght += 1
+    lst1_lenght += 1
 
 for i in lst2:
-        lst2_lenght += 1
+    lst2_lenght += 1
 
 # print(lst1_lenght)
 # print(lst2_lenght)
 
 if lst1 > lst2:
-        print("La lista 1 es mayor a la lista 2.")
+    print("La lista 1 es mayor a la lista 2.")
 elif lst2 > lst1:
-        print("La lista 2 es mayor a la lista 1.")
+    print("La lista 2 es mayor a la lista 1.")
 else:
-        # Nunca se va a dar este caso, pero Eric, nos conocemos.
-        print("Las dos listas son iguales.")
+    # Nunca se va a dar este caso, pero Eric, nos conocemos.
+    print("Las dos listas son iguales.")
 
 print("\nInicio del ejercicio 4.2\n")
 
@@ -128,34 +126,34 @@ lst1_media = 0
 lst2_media = 0
 
 for i in range(len(lst1)):
-        lst1_media += lst1[i]
+    lst1_media += lst1[i]
 
 for i in range(len(lst2)):
-        lst2_media += lst2[i]
+    lst2_media += lst2[i]
 
 lista1_media = lst1_media / lst1_lenght
 lista2_media = lst2_media / lst2_lenght
 
 if lista1_media > lista2_media:
-        print("La media de la lista 1 es mayor a la lista 2.")
+    print("La media de la lista 1 es mayor a la lista 2.")
 elif lista2_media > lista1_media:
-        print("La media de la lista 2 es mayor a la lista 1.")
+    print("La media de la lista 2 es mayor a la lista 1.")
 else:
-        # Nunca se va a dar este caso, pero Eric, nos conocemos.
-        print("Las dos listas son iguales.")
+    # Nunca se va a dar este caso, pero Eric, nos conocemos.
+    print("Las dos listas son iguales.")
 
 print("\nInicio del ejercicio 4.3\n")
 
 for i in range(lst1_lenght):
-        # Que no salga la excepción index out of range :(
-        if i+1 > lst2_lenght:
-                print(f"En la posición {i} solo la lista 1 tiene valores.") 
-        elif lst1[i] > lst2[i]:
-                print(f"En la posición {i} la lista 1 tiene el valor más grande.")
-        elif lst2[i] > lst2[i]:
-                print(f"En la posición {i} la lista 2 tiene el valor más grande.")
-        else:
-                print(f"En la posición {i} las dos listas tienen el mismo valor.")
+    # Que no salga la excepción index out of range :(
+    if i + 1 > lst2_lenght:
+        print(f"En la posición {i} solo la lista 1 tiene valores.")
+    elif lst1[i] > lst2[i]:
+        print(f"En la posición {i} la lista 1 tiene el valor más grande.")
+    elif lst2[i] > lst2[i]:
+        print(f"En la posición {i} la lista 2 tiene el valor más grande.")
+    else:
+        print(f"En la posición {i} las dos listas tienen el mismo valor.")
 
 print("\nInicio del ejercicio 4.4\n")
 
@@ -179,9 +177,9 @@ while changed:
             lst2_ordenada[i], lst2_ordenada[i + 1] = lst2_ordenada[i + 1], lst2_ordenada[i]
 
 for i in range(len(lst1_ordenada)):
-        print(lst1_ordenada[i], end=" ")
+    print(lst1_ordenada[i], end=" ")
 
 print()
 
-for i in range(len(lst2_ordenada)-1, 0, -1):
-        print(lst2_ordenada[i], end=" ")
+for i in range(len(lst2_ordenada) - 1, 0, -1):
+    print(lst2_ordenada[i], end=" ")

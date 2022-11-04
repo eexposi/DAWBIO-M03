@@ -44,27 +44,31 @@ for i in range(numero_de_alumnos + 1):
         precio_mas_50_alumnos = 45 - descuento1
         print("Importe total del grupo: " + str((precio_mas_50_alumnos * numero_de_alumnos) - precio_menores) + "€")
         print("Importa total mayores de edad: " + str(precio_mas_50_alumnos * mayores_de_edad) + "€")
-        print("Importe total menores de edad: " + str((precio_mas_50_alumnos - descuento_menores_de_edad) * menores_de_edad) + "€")
+        print("Importe total menores de edad: " + str(
+            (precio_mas_50_alumnos - descuento_menores_de_edad) * menores_de_edad) + "€")
         break
     elif i > 20 and i < 50:
         descuento2 = 45 * 20 // 100
         precio_entre_20_50_alumnos = 45 - descuento2
         print("Importe total del grupo: " + str(precio_entre_20_50_alumnos * numero_de_alumnos - precio_menores) + "€")
         print("Importa total mayores de edad: " + str(precio_entre_20_50_alumnos * mayores_de_edad) + "€")
-        print("Importe total menores de edad: " + str((precio_entre_20_50_alumnos - descuento_menores_de_edad) * menores_de_edad) + "€")
+        print("Importe total menores de edad: " + str(
+            (precio_entre_20_50_alumnos - descuento_menores_de_edad) * menores_de_edad) + "€")
         break
     elif i > 10 and i < 20:
         descuento3 = 45 * 10 // 100
         precio_entre_10_20_alumnos = 45 - descuento3
         print("Importe total del grupo: " + str(precio_entre_10_20_alumnos * numero_de_alumnos - precio_menores) + "€")
         print("Importa total mayores de edad: " + str(precio_entre_10_20_alumnos * mayores_de_edad) + "€")
-        print("Importe total menores de edad: " + str((precio_entre_10_20_alumnos - descuento_menores_de_edad) * menores_de_edad) + "€")
+        print("Importe total menores de edad: " + str(
+            (precio_entre_10_20_alumnos - descuento_menores_de_edad) * menores_de_edad) + "€")
         break
     elif i < 10:
         precio_menos_10_alumnos = 45
         print("Importe total del grupo: " + str((precio_menos_10_alumnos * numero_de_alumnos) - precio_menores) + "€")
         print("Importa total mayores de edad: " + str(precio_menos_10_alumnos * mayores_de_edad) + "€")
-        print("Importe total menores de edad: " + str((precio_menos_10_alumnos - descuento_menores_de_edad) * menores_de_edad) + "€")
+        print("Importe total menores de edad: " + str(
+            (precio_menos_10_alumnos - descuento_menores_de_edad) * menores_de_edad) + "€")
         break
 
 # EJERCICIO 4
@@ -88,7 +92,7 @@ for i in lst2:
 
 if cont_lst1 > cont_lst2:
     print("La primera lista es más grande que la segunda lista")
-else: 
+else:
     print("La segunda lista es más grande que la primera lista")
 
 # 4.2 - Realizaremos la media de cada una, indicando el resultado y cuál tiene la media más grande.
@@ -126,17 +130,16 @@ lista_mayor_menor = lst1[:]
 hay_cambios = True
 while hay_cambios:
     hay_cambios = False
-    for i in range(len(lista_mayor_menor)-1):
-        if lista_mayor_menor[i] < lista_mayor_menor[i+1]:
+    for i in range(len(lista_mayor_menor) - 1):
+        if lista_mayor_menor[i] < lista_mayor_menor[i + 1]:
             hay_cambios = True
-            lista_mayor_menor[i], lista_mayor_menor[i+1] = lista_mayor_menor[i+1], lista_mayor_menor[i]
+            lista_mayor_menor[i], lista_mayor_menor[i + 1] = lista_mayor_menor[i + 1], lista_mayor_menor[i]
 
 lista_mayor_menor2 = lst2[:]
 hay_cambios = True
 while hay_cambios:
     hay_cambios = False
-    for i in range(len(lista_mayor_menor2)-1):
-        if lista_mayor_menor2[i] < lista_mayor_menor2[i+1]:
+    for i in range(len(lista_mayor_menor2) - 1):
+        if lista_mayor_menor2[i] < lista_mayor_menor2[i + 1]:
             hay_cambios = True
-            lista_mayor_menor2[i], lista_mayor_menor2[i+1] = lista_mayor_menor2[i+1], lista_mayor_menor2[i]
-
+            lista_mayor_menor2[i], lista_mayor_menor2[i + 1] = lista_mayor_menor2[i + 1], lista_mayor_menor2[i]

@@ -13,11 +13,11 @@ EJERCICIO 1
 Elaborar un programa que realice la conversión de cm. a pulgadas. Donde 1cm = 0.39737 pulgadas.
 """
 print("EJERCICIO 1")
-cm=int(input("Dime cuantos cemtimetros quieres convertir: "))
+cm = int(input("Dime cuantos cemtimetros quieres convertir: "))
 
-pulgadas=0.39737
-cal=pulgadas*cm
-print(cm,"=",cal,"pulgadas")
+pulgadas = 0.39737
+cal = pulgadas * cm
+print(cm, "=", cal, "pulgadas")
 
 """
 EJERCICIO 2
@@ -26,18 +26,16 @@ debe mostrar: 40 meses.
 """
 print("EJERCICIO 2")
 
-e=int(input("dime tu edad: "))
-m=int(input("introduce los meses "))
-mes=30
-ano=365
-edad_mes=ano/mes
+e = int(input("dime tu edad: "))
+m = int(input("introduce los meses "))
+mes = 30
+ano = 365
+edad_mes = ano / mes
 
-for i in range(e-1):
-        edad_mes+=12
-edad_mes+=m
-print("Tienes: ",int(edad_mes),"meses")
-
-
+for i in range(e - 1):
+    edad_mes += 12
+edad_mes += m
+print("Tienes: ", int(edad_mes), "meses")
 
 """
 EJERCICIO 3
@@ -56,54 +54,45 @@ El programa mostrará el importe total a pagar para los mayores de edad, el impo
 el importe total del grupo.
 """
 print("EJERCICIO 3")
-c=int(input("Dime cuantos alumnos mayores de edad son: "))
-m=int(input("¿Cuantos son menores? "))
+c = int(input("Dime cuantos alumnos mayores de edad son: "))
+m = int(input("¿Cuantos son menores? "))
 
-precio=45
-alum18=precio*c
-alum17=precio*m
-descm=(alum17/100*15)
-desc1=(alum18/100*30)
-desc2=(alum18/100*20)
-desc3=(alum18/100*10)
+precio = 45
+alum18 = precio * c
+alum17 = precio * m
+descm = (alum17 / 100 * 15)
+desc1 = (alum18 / 100 * 30)
+desc2 = (alum18 / 100 * 20)
+desc3 = (alum18 / 100 * 10)
 
-if c+m>50:
-        
-        alum18-=desc1
-        alum17-=descm
-        print("Tienes",m,"menores, los alumnos menores tienen","15%","descuento, El total a los menores es : ",alum17)
-        print("Tienes un",c,"Alumnos mayores, 30%","De descuento por tener mas de 50 alumnos, Tu precio es: ",alum18)
-        total=alum18-alum17
-        print("Tu total es: ",total)
-        
-elif c+m>20 or c==50:
-        alum18-=desc2
-        alum17-=descm
-        print("Tienes",m,"menores, los alumnos menores tienen","15%","descuento, El total a los menores es : ",alum17)
-        print("Tienes un",c,"Alumnos mayores, 20%","De descuento por tener mas de 20 alumnos, Tu precio es: ",alum18)
-        total=alum18-alum17
-        print("Tu total es: ",total)
-elif c+m>=10 or c==20:
-        alum18-=desc3
-        alum17-=descm
-        print("Tienes",m,"menores, los alumnos menores tienen","15%","descuento, El total a los menores es : ",alum17)
-        print("Tienes un",c,"Alumnos mayores, 10%","De descuento por tener mas de 10 alumnos, Tu precio es: ",alum18)
-        total=alum18-alum17
-        print("Tu total es: ",total)
-else :
-        alum17-=descm
-        print("Tienes",m,"menores, los alumnos menores tienen","15%","descuento, El total a los menores es : ",alum17)
-        total=alum18-alum17
-        print("Tienes un",c,"Alumnos mayores,"," Tu precio es: ",alum18)
-        
+if c + m > 50:
 
+    alum18 -= desc1
+    alum17 -= descm
+    print("Tienes", m, "menores, los alumnos menores tienen", "15%", "descuento, El total a los menores es : ", alum17)
+    print("Tienes un", c, "Alumnos mayores, 30%", "De descuento por tener mas de 50 alumnos, Tu precio es: ", alum18)
+    total = alum18 - alum17
+    print("Tu total es: ", total)
 
-
-
-
-
-
-
+elif c + m > 20 or c == 50:
+    alum18 -= desc2
+    alum17 -= descm
+    print("Tienes", m, "menores, los alumnos menores tienen", "15%", "descuento, El total a los menores es : ", alum17)
+    print("Tienes un", c, "Alumnos mayores, 20%", "De descuento por tener mas de 20 alumnos, Tu precio es: ", alum18)
+    total = alum18 - alum17
+    print("Tu total es: ", total)
+elif c + m >= 10 or c == 20:
+    alum18 -= desc3
+    alum17 -= descm
+    print("Tienes", m, "menores, los alumnos menores tienen", "15%", "descuento, El total a los menores es : ", alum17)
+    print("Tienes un", c, "Alumnos mayores, 10%", "De descuento por tener mas de 10 alumnos, Tu precio es: ", alum18)
+    total = alum18 - alum17
+    print("Tu total es: ", total)
+else:
+    alum17 -= descm
+    print("Tienes", m, "menores, los alumnos menores tienen", "15%", "descuento, El total a los menores es : ", alum17)
+    total = alum18 - alum17
+    print("Tienes un", c, "Alumnos mayores,", " Tu precio es: ", alum18)
 
 """
 EJERCICIO 4
@@ -125,7 +114,7 @@ invertida.
 print("EJERCICIO 4")
 
 # 4.1
-lst1=[3, 8, 6, 5, 7, 7, 2, 7, 7, 10, 3, 4, 3, 1, 3, 6, 6, 5, 5, 6, 8, 3, 4, 8, 1, 10, 4, 9, 9, 7, 4, 10, 5, 0, 0, 2,
+lst1 = [3, 8, 6, 5, 7, 7, 2, 7, 7, 10, 3, 4, 3, 1, 3, 6, 6, 5, 5, 6, 8, 3, 4, 8, 1, 10, 4, 9, 9, 7, 4, 10, 5, 0, 0, 2,
         0, 1, 5, 1, 2, 4, 4, 5, 3, 2, 6, 4, 10, 9, 4, 6, 2, 1, 3, 4, 7, 0, 2, 10, 5, 3, 1, 10, 6, 3, 7, 5, 5, 1, 5, 3,
         5, 9, 8, 0, 7, 6, 7, 2, 4, 4, 7, 8, 0, 1, 4, 3, 6, 2, 0, 10, 4, 10, 9, 3, 4, 4, 7, 5]
 
@@ -133,23 +122,23 @@ lst2 = [3, 1, 3, 6, 7, 0, 3, 9, 4, 5, 4, 2, 9, 2, 6, 5, 4, 2, 3, 9, 3, 4, 4, 1, 
         5, 1, 4, 7, 6, 10, 8, 6, 0, 8, 5, 6, 5, 3, 6, 3, 7, 9, 5, 6, 0, 8, 5, 10, 10, 4, 4, 3, 10, 5, 8, 2, 8, 9, 10, 2,
         0, 10, 7, 0, 1, 6, 2, 2, 7, 9, 5, 7, 6, 9, 2, 6, 1, 8, 0, 6, 3, 8, 1, 7, 2, 0]
 
-print("\nLISTA 1 \n",lst1)
-print("\nLISTA 2 \n",lst2)
+print("\nLISTA 1 \n", lst1)
+print("\nLISTA 2 \n", lst2)
 
-if len(lst1)>len(lst2):
-        print("\nLa lista 1 Es mas grande")
+if len(lst1) > len(lst2):
+    print("\nLa lista 1 Es mas grande")
 else:
-        print("\nLa lista 2 es mas grande ")
+    print("\nLa lista 2 es mas grande ")
 # 4.2
-promA=sum(lst1) / len(lst1)
-promB=sum(lst2) / len(lst2)
-print("\nEl promedio de la lista 1 es: ",promA)
-print("\nEl promedio de la lista 2 es: ",promB)
+promA = sum(lst1) / len(lst1)
+promB = sum(lst2) / len(lst2)
+print("\nEl promedio de la lista 1 es: ", promA)
+print("\nEl promedio de la lista 2 es: ", promB)
 
-if promA>promB:
-        print("El promedio de la lista 1 es mayor")
+if promA > promB:
+    print("El promedio de la lista 1 es mayor")
 else:
-        print("\nEl promedio de la lista 2 es mayor")
+    print("\nEl promedio de la lista 2 es mayor")
 
 # 4.3
 lista_ordenada1 = lst1[:]
@@ -170,4 +159,4 @@ while hay_cambios:
             hay_cambios = True
             lista_ordenada2[i], lista_ordenada2[i + 1] = lista_ordenada2[i + 1], lista_ordenada2[i]
             break
-print("\nLISTA 1 ORDENADA\n",lista_ordenada1,"\nLISTA 2 ORDENADA\n",lista_ordenada2)
+print("\nLISTA 1 ORDENADA\n", lista_ordenada1, "\nLISTA 2 ORDENADA\n", lista_ordenada2)
