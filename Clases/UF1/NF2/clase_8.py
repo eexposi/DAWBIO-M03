@@ -64,7 +64,6 @@ except:                                                                     # <-
 
 
 """ TIPOS DE ERROR:
-
 ZeroDivisionError: cuando el divisor de una operación es 0 (/, // y %).
 ValueError: cuando una función tipo int() o float() recibe un tipo de valor no esperado.
 TypeError: no se puede usar un tipo de valor según el contexto, p.e. usar un float como índice.
@@ -73,7 +72,6 @@ AttributeError: uso de atributo incorrecto.
     lista.depend(2) --> no OK
 SyntaxError: cuando se escribe mal el código pero el intérprete "se lo traga",
              hasta que se ejecuta y peta.
-
 """
 
 # Cuando creamos un código, más importante es TESTEAR buscando los posibles errores que confirmar que funciona
