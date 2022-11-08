@@ -21,7 +21,8 @@ while True:
 
 """
 EJERCICIO 2
-Obtener la edad de una persona en meses, si se introduce su edad en años y meses. Ejemplo: Introducimos 3 años 4 meses
+Obtener la edad de una persona en meses, si se introduce su edad en años y meses. 
+Ejemplo: Introducimos 3 años 4 meses
 debe mostrar: 40 meses.
 """
 
@@ -32,7 +33,7 @@ while True:
         anyos = int(input("Indica los años: "))
         meses = int(input("Indica los meses: "))
         if (anyos or meses) <= 0:
-            raise Exception("Error")
+            raise Exception
         total_meses = (anyos * 12) + meses
         print("Tienes " + str(total_meses) + " meses de edad.")
         break
