@@ -69,27 +69,27 @@ while True:
     try:
         alumnos = int(input("Introduce la cantidad total de alumnos: "))
         menores = int(input("Introduce la cantidad de menores de edad: "))
-        if (alumnos or menores) < 0:
-            raise Exception ("Números negativos.")
+        if (alumnos < 0) or (menores < 0):
+            raise Exception("Números negativos.")
+
+        precio_entrada = 45
+        precio_menores = (precio_entrada * 0.85)
+        precio_con_descuento = 0
+
+        if alumnos > 50:
+            precio_con_descuento = precio_entrada * 0.70
+        elif 20 < alumnos <= 50:
+            precio_con_descuento = precio_entrada * 0.80
+        elif 10 < alumnos <= 20:
+            precio_con_descuento = precio_entrada * 0.9
         else:
-            precio_entrada = 45
-            precio_menores = (precio_entrada * 0.85)
-            precio_con_descuento = 0
+            precio_con_descuento = precio_entrada
 
-            if alumnos > 50:
-                precio_con_descuento = precio_entrada * 0.70
-            elif 20 < alumnos <= 50:
-                precio_con_descuento = precio_entrada * 0.80
-            elif 10 < alumnos <= 20:
-                precio_con_descuento = precio_entrada * 0.9
-            else:
-                precio_con_descuento = precio_entrada
-
-            coste_menores = menores * precio_menores
-            coste_adultos = ((alumnos - menores) * precio_con_descuento)
-            print("Los menores deberán pagar un total de: " + str(coste_menores))
-            print("Los mayores de edad deberán pagar un total de: " + str(coste_adultos))
-            print("El coste total es de: " + str(coste_adultos + coste_menores))
+        coste_menores = menores * precio_menores
+        coste_adultos = ((alumnos - menores) * precio_con_descuento)
+        print("Los menores deberán pagar un total de: " + str(coste_menores))
+        print("Los mayores de edad deberán pagar un total de: " + str(coste_adultos))
+        print("El coste total es de: " + str(coste_adultos + coste_menores))
         break
 
     except ValueError:
@@ -100,6 +100,8 @@ while True:
         print("Debes introducir valores positivos.")
     except:  # <-- POR DEFECTO, siempre el último except
         print("Ha sucedido algo extraño, ¡lo siento!")
+
+
 
 
 """
