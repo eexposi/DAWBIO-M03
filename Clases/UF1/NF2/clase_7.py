@@ -76,6 +76,7 @@ for i in range(len(usuarios["nombres"]) - 1):
     print("Nombre:", usuarios["nombres"][i])
     print("Identificación:", usuarios["identificaciones"][i])
 
+
 """ EJERCICIO 1 ------------------------------------------------------------------------------------
 Escribir un programa que guarde en una variable el diccionario {'Euro':'€', 'Dollar':'$', 'Yen':'¥'}, 
 pregunte al usuario por una divisa y muestre su símbolo o un mensaje de aviso si la divisa no está 
@@ -89,6 +90,7 @@ moneda 2 <--> símbolo 2
 ...
 moneda nueva <--> símbolo nuevo
 ------------------------------------------------------------------------------------------------"""
+
 
 """ EJERCICIO 2 -----------------------------------------------------------------------------------
 Escribir un programa que cree un diccionario simulando una cesta de la compra. El programa debe 

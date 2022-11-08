@@ -1,3 +1,5 @@
+import random
+
 """
 EJERCICIO 1
 Elaborar un programa que realice la conversión de cm. a pulgadas. Donde 1cm = 0.39737 pulgadas.
@@ -124,3 +126,17 @@ alumno3 = random de 10 notas
     ...
     Pt10 -- 8
 """
+
+list_alu1 = []
+list_alu2 = []
+list_alu3 = []
+for i in range(10):
+    list_alu1.append(random.randint(0, 10))
+for i in range(10):
+    list_alu2.append(random.randint(0, 10))
+for i in range(10):
+    list_alu3.append(random.randint(0, 10))
+
+alumno1 = {}
+alumno2 = {}
+alumno3 = {}

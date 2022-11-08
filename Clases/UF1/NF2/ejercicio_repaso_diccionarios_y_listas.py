@@ -1,4 +1,4 @@
-""" EJERCICIO DE REPASO DE DICCIONARIOS----------------------------------------------------------------
+""" EJERCICIO DE REPASO DE DICCIONARIOS ----------------------------------------------------------------
 
 Mediante el uso de diccionario/s, vamos a gestionar los datos de alumnos y sus notas.
 IMPORTANTE: para cada alumno, el sistema debe permitir almacenar un número indeterminado de notas.
@@ -26,15 +26,3 @@ volverá al menú principal. El menú se generará con lista, no un print por op
                                                 0 - Salir
                                             Introduce opción:
 --------------------------------------------------------------------------------------------------- """
-
-menu = {
-    "   0": "Salir",
-    "   1": "Añadir alumno",
-    "   2": "Buscar alumno",
-    "   3": "Añadir nota a alumno",
-    "   4": "Mostrar la media de notas de alumno",
-    "   5": "Borrar un alumno"}
-
-print("Menú de opciones:")
-for n, opt in menu.items():
-    print(n, opt, sep=" - ")
