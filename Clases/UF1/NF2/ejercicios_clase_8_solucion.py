@@ -122,16 +122,69 @@ alumno3 = random de 10 notas
     Pt10 -- 8
 """
 
-list_alu1 = []
-list_alu2 = []
-list_alu3 = []
-for i in range(10):
-    list_alu1.append(random.randint(0, 10))
-for i in range(10):
-    list_alu2.append(random.randint(0, 10))
-for i in range(10):
-    list_alu3.append(random.randint(0, 10))
+import random
 
-alumno1 = {}
-alumno2 = {}
-alumno3 = {}
+# 4,1
+try:
+    alumno1 = {"nombre": "1"}
+    for i in range(1, 11):
+        alumno1["Pt" + str(i)] = random.randint(0, 9)
+
+    # Creamos alumno 2
+    alumno2 = {"nombre": "2"}
+    for i in range(1, 11):
+        alumno2["Pt" + str(i)] = random.randint(0, 9)
+
+    # Creamos alumno 3
+    alumno3 = {"nombre": "3"}
+    for i in range(1, 11):
+        alumno3["Pt" + str(i)] = random.randint(0, 9)
+except Exception as e:
+    print(e)
+
+# 4,2
+for e in alumno1:
+    media1 = alumno1[e]
+for e in alumno2:
+    media2 = alumno2[e]
+for e in alumno3:
+    media3 = alumno3[e]
+
+print("La media del alumno ", alumno1["nombre"], " es de ", media1)
+print("La media del alumno ", alumno2["nombre"], " es de ", media2)
+print("La media del alumno ", alumno3["nombre"], " es de ", media3)
+medias = [media1, media2, media3]
+medias.sort()
+print("La media más grande es:", medias[len(medias) - 1])
+# 4.3
+try:
+    for i in range(1, 14):
+        key = "Pt" + str(i)
+        if alumno1[key] > alumno2[key] > alumno3[key]:
+            print("La nota del alumno ", alumno1["nombre"], " es mayor. Notas: ", alumno1[key], alumno2[key], alumno3[key])
+        elif alumno3[key] < alumno2[key] > alumno1[key]:
+            print("La nota del alumno ", alumno2["nombre"], " es mayor. Notas: ", alumno1[key], alumno2[key], alumno3[key])
+        elif alumno2[key] < alumno3[key] > alumno1[key]:
+            print("La nota del alumno ", alumno3["nombre"], " es mayor. Notas: ", alumno1[key], alumno2[key], alumno3[key])
+        else:
+            print("Son iguales.")
+except KeyError:
+    print("Has recorrido más de la cuenta, listillo.")
+# 4.4
+print("Alumno ", alumno1["nombre"])
+print("-------------")
+for e in alumno1:
+    if e != "nombre":
+        print(e, "--", alumno1[e])
+
+print("Alumno ", alumno2["nombre"])
+print("-------------")
+for e in alumno2:
+    if e != "nombre":
+        print(e, "--", alumno2[e])
+
+print("Alumno ", alumno3["nombre"])
+print("-------------")
+for e in alumno3:
+    if e != "nombre":
+        print(e, "--", alumno3[e])
