@@ -17,9 +17,8 @@ while True:
         print("Debes introducir un valor entero.")
     except (SyntaxError, NameError):
         print("¿Seguro que el código está bien...?")
-    except:                                 # <-- POR DEFECTO, siempre el último except
+    except:  # <-- POR DEFECTO, siempre el último except
         print("Ha sucedido algo extraño, ¡lo siento!")
-
 
 """
 EJERCICIO 2
@@ -48,7 +47,6 @@ while True:
         print("Debes introducir valores positivos.")
     except:  # <-- POR DEFECTO, siempre el último except
         print("Ha sucedido algo extraño, ¡lo siento!")
-
 
 """
 EJERCICIO 3
@@ -102,9 +100,6 @@ while True:
         print("Debes introducir valores positivos.")
     except:  # <-- POR DEFECTO, siempre el último except
         print("Ha sucedido algo extraño, ¡lo siento!")
-
-
-
 
 """
 EJERCICIO 4

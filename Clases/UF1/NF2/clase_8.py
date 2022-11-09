@@ -3,8 +3,8 @@
 ----------------------------------------------------------------------------------------------------"""
 
 # CUANDO EL DATO NO ES CORRECTO:
-value = int(input('Ingresa un número natural: '))
-print("El recíproco de", value, "es", 1 / value)
+# value = int(input('Ingresa un número natural: '))
+# print("El recíproco de", value, "es", 1 / value)
 
 # SI INTRODUCIMOS UN VALOR NO INT...
 """ Traceback (most recent call last):
@@ -20,14 +20,14 @@ ZeroDivisionError: division by zero                             <-- ZeroDivision
 """
 
 # PODEMOS INTENTAR EVITAR EL ERROR, PERO PYTHON NO RECOMIENDA TRABAJAR ASÍ...
-salida = False
-while salida == False:
-    value = int(input('Ingresa un número natural: '))
-    if type(value) is int:
-        print("El recíproco de", value, "es", 1 / value)
-        salida = True
-    else:
-        print("El valor introducido no es INT.")
+# salida = False
+# while salida == False:
+#     value = int(input('Ingresa un número natural: '))
+#     if type(value) is int:
+#         print("El recíproco de", value, "es", 1 / value)
+#         salida = True
+#     else:
+#         print("El valor introducido no es INT.")
 
 # ES MEJOR MANEJAR UN ERROR CUANDO OCURRE QUE TRATAR DE EVITARLO
 
@@ -41,27 +41,27 @@ while salida == False:
 # # exclusivamente para pedir perdón.
 
 # -------- OPCIÓN GENERAL
-try:
-    value = input('Ingresa un número natural: ')
-    print('El recíproco de', value, 'es', 1 / int(value))
-except:
-    print('No se que hacer con', value)
-
-# -------- OPCIÓN ESPECÍFICA SEGÚN EL TIPO DE ERROR
-try:
-    value = input('Ingresa un número natural: ')
-    print('El recíproco de', value, 'es', 1 / int(value))
-except ValueError:
-    print('No se que hacer con', value)
-except ZeroDivisionError:
-    print('La división entre cero no está permitida en nuestro Universo.')
-
-except Exception as e:
-    # ... PRINTA EL MENSAJE DE ERROR ... #
-    print(e)
-
-except:  # <-- POR DEFECTO, siempre el último except
-    print('Ha sucedido algo extraño, ¡lo siento!')
+# try:
+#     value = input('Ingresa un número natural: ')
+#     print('El recíproco de', value, 'es', 1 / int(value))
+# except:
+#     print('No se que hacer con', value)
+#
+# # -------- OPCIÓN ESPECÍFICA SEGÚN EL TIPO DE ERROR
+# try:
+#     value = input('Ingresa un número natural: ')
+#     print('El recíproco de', value, 'es', 1 / int(value))
+# except ValueError:
+#     print('No se que hacer con', value)
+# except ZeroDivisionError:
+#     print('La división entre cero no está permitida en nuestro Universo.')
+#
+# except Exception as e:
+#     # ... PRINTA EL MENSAJE DE ERROR ... #
+#     print(e)
+#
+# except:  # <-- POR DEFECTO, siempre el último except
+# print('Ha sucedido algo extraño, ¡lo siento!')
 
 """ TIPOS DE ERROR:
 ZeroDivisionError: cuando el divisor de una operación es 0 (/, // y %).
@@ -77,15 +77,15 @@ SyntaxError: cuando se escribe mal el código pero el intérprete "se lo traga",
 # Cuando creamos un código, más importante es TESTEAR buscando los posibles errores que confirmar que funciona
 # para los valores esperados. Probemos este código:
 
-temperature = float(input('Ingresa la temperatura actual:'))
-if temperature > 0:
-    print("Por encima de cero")
-elif temperature < 0:
-    prin("Por debajo de cero")
-else:
-    print("Cero")
-
-    # LENGUAJE INTERPRETADO          vs           # LENGUAJE COMPILADO
+# temperature = float(input('Ingresa la temperatura actual:'))
+# if temperature > 0:
+#     print("Por encima de cero")
+# elif temperature < 0:
+#     prin("Por debajo de cero")
+# else:
+#     print("Cero")
+#
+#     # LENGUAJE INTERPRETADO          vs           # LENGUAJE COMPILADO
 
 """ DEPURACIÓN POR IMPRESIÓN: uso de banderillas, marcas de paso """
 
@@ -141,3 +141,66 @@ alumno3 = random de 10 notas
     ...
     Pt10 -- 8
 """
+import random
+
+# 4,1
+alumno1 = {"nombre": "1"}
+for i in range(1, 11):
+    alumno1["Pt" + str(i)] = random.randint(0, 9)
+
+# Creamos alumno 2
+alumno2 = {"nombre": "2"}
+for i in range(1, 11):
+    alumno2["Pt" + str(i)] = random.randint(0, 9)
+
+# Creamos alumno 3
+alumno3 = {"nombre": "3"}
+for i in range(1, 11):
+    alumno3["Pt" + str(i)] = random.randint(0, 9)
+
+# 4,2
+for e in alumno1:
+    media1 = alumno1[e]
+for e in alumno2:
+    media2 = alumno2[e]
+for e in alumno3:
+    media3 = alumno3[e]
+
+print("La media del alumno ", alumno1["nombre"], " es de ", media1)
+print("La media del alumno ", alumno2["nombre"], " es de ", media2)
+print("La media del alumno ", alumno3["nombre"], " es de ", media3)
+medias = []
+medias.append(media1)
+medias.append(media2)
+medias.append(media3)
+medias.sort()
+print("La media más grande es:", medias[len(medias) - 1])
+# 4.3
+
+for i in range(1, 11):
+    key = "Pt" + str(i)
+    if alumno1[key] > alumno2[key] > alumno3[key]:
+        print("La nota del alumno ", alumno1["nombre"], " es mayor. Notas: ", alumno1[key], alumno2[key], alumno3[key])
+    elif alumno3[key] < alumno2[key] > alumno1[key]:
+        print("La nota del alumno ", alumno2["nombre"], " es mayor. Notas: ", alumno1[key], alumno2[key], alumno3[key])
+    elif alumno2[key] < alumno3[key] > alumno1[key]:
+        print("La nota del alumno ", alumno3["nombre"], " es mayor. Notas: ", alumno1[key], alumno2[key], alumno3[key])
+
+# 4.4
+print("Alumno ", alumno1["nombre"])
+print("-------------")
+for e in alumno1:
+    if e != "nombre":
+        print(e, "--", alumno1[e])
+
+print("Alumno ", alumno2["nombre"])
+print("-------------")
+for e in alumno2:
+    if e != "nombre":
+        print(e, "--", alumno2[e])
+
+print("Alumno ", alumno3["nombre"])
+print("-------------")
+for e in alumno3:
+    if e != "nombre":
+        print(e, "--", alumno3[e])
