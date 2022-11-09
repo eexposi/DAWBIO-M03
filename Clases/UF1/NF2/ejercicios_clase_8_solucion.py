@@ -1,5 +1,3 @@
-import random
-
 """
 EJERCICIO 1
 Elaborar un programa que realice la conversión de cm. a pulgadas. Donde 1cm = 0.39737 pulgadas.
@@ -161,11 +159,14 @@ try:
     for i in range(1, 14):
         key = "Pt" + str(i)
         if alumno1[key] > alumno2[key] > alumno3[key]:
-            print("La nota del alumno ", alumno1["nombre"], " es mayor. Notas: ", alumno1[key], alumno2[key], alumno3[key])
+            print("La nota del alumno ", alumno1["nombre"], " es mayor. Notas: ", alumno1[key], alumno2[key],
+                  alumno3[key])
         elif alumno3[key] < alumno2[key] > alumno1[key]:
-            print("La nota del alumno ", alumno2["nombre"], " es mayor. Notas: ", alumno1[key], alumno2[key], alumno3[key])
+            print("La nota del alumno ", alumno2["nombre"], " es mayor. Notas: ", alumno1[key], alumno2[key],
+                  alumno3[key])
         elif alumno2[key] < alumno3[key] > alumno1[key]:
-            print("La nota del alumno ", alumno3["nombre"], " es mayor. Notas: ", alumno1[key], alumno2[key], alumno3[key])
+            print("La nota del alumno ", alumno3["nombre"], " es mayor. Notas: ", alumno1[key], alumno2[key],
+                  alumno3[key])
         else:
             print("Son iguales.")
 except KeyError:

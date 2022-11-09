@@ -141,4 +141,3 @@ alumno3 = random de 10 notas
     ...
     Pt10 -- 8
 """
-
