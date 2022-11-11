@@ -39,7 +39,7 @@ while True:
         alumno=input("Indícame el nombre del alumno: ")                                     # Añadir alumno y nota
         if len(diccionario) == 0:
             nota=int(input("Introduce una nota para " + alumno + ": "))
-            diccionario[alumno]=nota
+            diccionario[alumno].append(nota)
             print("Alumno introducido en la base de datos.")
             print()
         else:
@@ -48,9 +48,10 @@ while True:
                 print()
             else:
                 nota=int(input("Introduce una nota para " + alumno + ": "))
-                diccionario[alumno]=nota
+                diccionario[alumno].append(nota)
                 print("Alumno introducido en la base de datos.")
                 print()
+
     elif opt == 2:
         alumno=input("Indícame el nombre del alumno: ")                                    # Buscar alumno y mostrar sus notas
         if alumno in diccionario:
@@ -59,10 +60,19 @@ while True:
         else:
             print("El alumno no está en nuestra base de datos. ")
             print()
+
     elif opt == 3:
-        print() # Añadir nota a un alumno
+        alumno=input("Indícame el nombre del alumno: ")                                    # Añadir nota a un alumno
+        if alumno in diccionario:
+            nota=int(input("Introduce una nota para " + alumno + ": "))
+            diccionario[alumno].append(nota)
+        else:
+            print("El alumno no está en nuestra base de datos. ")
+            print()
+
     elif opt == 4:
         print() # Mostrar la media de notas de un alumno
+
     elif opt == 5:
         alumno=input("Indícame el nombre del alumno: ")                                    # Borrar alumno
         if alumno in diccionario:
@@ -75,10 +85,12 @@ while True:
         else:
             print("El alumno no está en nuestra base de datos. ")
             print()
+
     elif opt == 0:
         print("Gracias por usar este programa! ")
         print()
         break
+
     else:
         print("Opción incorrecta! ")
 
