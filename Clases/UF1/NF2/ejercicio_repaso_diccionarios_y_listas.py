@@ -70,11 +70,10 @@ while True:
         total=0
         alumno=input("Indícame el nombre del alumno: ")                                    # Buscar alumno y mostrar su media
         if alumno in diccionario:
-            print("La nota media de " + alumno + " es: ")
             for alumno in diccionario:
                 for i in range(len(diccionario[alumno])):
                     total+=diccionario[alumno][i]
-                print(total/len(diccionario[alumno]))
+                print("La nota media de " + alumno + " es: " + str(total/len(diccionario[alumno])))
                 print()
         else:
             print("El alumno no está en nuestra base de datos. ")
