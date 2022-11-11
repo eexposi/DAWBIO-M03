@@ -44,10 +44,12 @@ while True:
         else:
             if alumno in diccionario:
                 print("El alumno ya está dado de alta.")
+                print()
             else:
                 nota=int(input("Introduce una nota para " + alumno + ": "))
                 diccionario[alumno]=nota
-                print(diccionario)
+                print("Alumno introducido en la base de datos.")
+                print()
     elif opt == 2:
         print() # Buscar alumno y mostrar sus notas
     elif opt == 3:
