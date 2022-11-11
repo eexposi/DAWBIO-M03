@@ -191,3 +191,5 @@ print("-------------")
 for e in alumno3:
     if e != "nombre":
         print(e, "--", alumno3[e])
+
+
