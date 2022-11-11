@@ -36,11 +36,12 @@ while True:
     opt=int(input("Introduce opción: "))
 
     if opt==1:
-        alumno=input("Indícame el nombre del alumno: ")             # Añadir alumno y nota
+        alumno=input("Indícame el nombre del alumno: ")                                     # Añadir alumno y nota
         if len(diccionario) == 0:
             nota=int(input("Introduce una nota para " + alumno + ": "))
             diccionario[alumno]=nota
-            print(diccionario)
+            print("Alumno introducido en la base de datos.")
+            print()
         else:
             if alumno in diccionario:
                 print("El alumno ya está dado de alta.")
@@ -51,14 +52,32 @@ while True:
                 print("Alumno introducido en la base de datos.")
                 print()
     elif opt == 2:
-        print() # Buscar alumno y mostrar sus notas
+        alumno=input("Indícame el nombre del alumno: ")                                    # Buscar alumno y mostrar sus notas
+        if alumno in diccionario:
+            print(diccionario[alumno])
+            print()
+        else:
+            print("El alumno no está en nuestra base de datos. ")
+            print()
     elif opt == 3:
         print() # Añadir nota a un alumno
     elif opt == 4:
         print() # Mostrar la media de notas de un alumno
     elif opt == 5:
-        print() # Borrar alumno
+        alumno=input("Indícame el nombre del alumno: ")                                    # Borrar alumno
+        if alumno in diccionario:
+            if input("Estás seguro que quieres borrar al alumno (Si/No)? ") == "Si":
+                del diccionario[alumno]
+                print("Alumno borrado correctamente. ")
+                print()
+            else:
+                print()
+        else:
+            print("El alumno no está en nuestra base de datos. ")
+            print()
     elif opt == 0:
+        print("Gracias por usar este programa! ")
+        print()
         break
     else:
         print("Opción incorrecta! ")
