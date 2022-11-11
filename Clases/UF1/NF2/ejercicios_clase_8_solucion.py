@@ -154,6 +154,7 @@ print("La media del alumno ", alumno3["nombre"], " es de ", media3)
 medias = [media1, media2, media3]
 medias.sort()
 print("La media más grande es:", medias[len(medias) - 1])
+
 # 4.3
 try:
     for i in range(1, 14):
@@ -171,6 +172,7 @@ try:
             print("Son iguales.")
 except KeyError:
     print("Has recorrido más de la cuenta, listillo.")
+
 # 4.4
 print("Alumno ", alumno1["nombre"])
 print("-------------")
