@@ -37,26 +37,22 @@ while True:
 
     if opt==1:
         alumno=input("Indícame el nombre del alumno: ")                                     # Añadir alumno y nota
-        if len(diccionario) == 0:
-            nota=int(input("Introduce una nota para " + alumno + ": "))
-            diccionario[alumno].append(nota)
-            print("Alumno introducido en la base de datos.")
+        if alumno in diccionario:
+            print("El alumno ya está dado de alta.")
             print()
         else:
-            if alumno in diccionario:
-                print("El alumno ya está dado de alta.")
-                print()
-            else:
-                nota=int(input("Introduce una nota para " + alumno + ": "))
-                diccionario[alumno].append(nota)
-                print("Alumno introducido en la base de datos.")
-                print()
+            nota=int(input("Introduce una nota para " + alumno + ": "))
+            diccionario[alumno]=[nota]
+            print("Alumno introducido en la base de datos.")
+            print()
 
     elif opt == 2:
         alumno=input("Indícame el nombre del alumno: ")                                    # Buscar alumno y mostrar sus notas
         if alumno in diccionario:
-            print(diccionario[alumno])
-            print()
+            print("Las notas de " + alumno + " son: ")
+            for alumno in diccionario:
+                for i in range(len(diccionario[alumno])):
+                    print(diccionario[alumno][i])
         else:
             print("El alumno no está en nuestra base de datos. ")
             print()
@@ -71,8 +67,18 @@ while True:
             print()
 
     elif opt == 4:
-        alumno=input("Indícame el nombre del alumno: ")                                    # Mostrar la media de notas de un alumno
+        total=0
+        alumno=input("Indícame el nombre del alumno: ")                                    # Buscar alumno y mostrar su media
         if alumno in diccionario:
+            print("La nota media de " + alumno + " es: ")
+            for alumno in diccionario:
+                for i in range(len(diccionario[alumno])):
+                    total+=diccionario[alumno][i]
+                print(total/len(diccionario[alumno]))
+                print()
+        else:
+            print("El alumno no está en nuestra base de datos. ")
+            print()
 
     elif opt == 5:
         alumno=input("Indícame el nombre del alumno: ")                                    # Borrar alumno
@@ -94,4 +100,3 @@ while True:
 
     else:
         print("Opción incorrecta! ")
-
