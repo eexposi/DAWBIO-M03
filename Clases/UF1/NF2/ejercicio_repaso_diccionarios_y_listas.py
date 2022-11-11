@@ -71,7 +71,8 @@ while True:
             print()
 
     elif opt == 4:
-        print() # Mostrar la media de notas de un alumno
+        alumno=input("Indícame el nombre del alumno: ")                                    # Mostrar la media de notas de un alumno
+        if alumno in diccionario:
 
     elif opt == 5:
         alumno=input("Indícame el nombre del alumno: ")                                    # Borrar alumno
