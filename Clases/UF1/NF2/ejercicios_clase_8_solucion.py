@@ -3,6 +3,7 @@ EJERCICIO 1
 Elaborar un programa que realice la conversión de cm. a pulgadas. Donde 1cm = 0.39737 pulgadas.
 """
 
+"""
 # Si no introducimos ningún valor o valor no numérico   -->    # ValueError: invalid literal for int() with base 10: ''
 # Si introducimos un valor no entero   -->   # ValueError: invalid literal for int() with base 10: '0,7'
 # Si nos equivocamos al programar   -->   #NameError o SyntaxError
@@ -17,6 +18,7 @@ while True:
         print("¿Seguro que el código está bien...?")
     except:  # <-- POR DEFECTO, siempre el último except
         print("Ha sucedido algo extraño, ¡lo siento!")
+"""
 
 """
 EJERCICIO 2
@@ -25,6 +27,7 @@ Ejemplo: Introducimos 3 años 4 meses
 debe mostrar: 40 meses.
 """
 
+"""
 while True:
     try:
         anyos = 0
@@ -45,6 +48,7 @@ while True:
         print("Debes introducir valores positivos.")
     except:  # <-- POR DEFECTO, siempre el último except
         print("Ha sucedido algo extraño, ¡lo siento!")
+"""
 
 """
 EJERCICIO 3
@@ -63,6 +67,7 @@ El programa mostrará el importe total a pagar para los mayores de edad, el impo
 el importe total del grupo.
 """
 
+"""
 while True:
     try:
         alumnos = int(input("Introduce la cantidad total de alumnos: "))
@@ -98,6 +103,7 @@ while True:
         print("Debes introducir valores positivos.")
     except:  # <-- POR DEFECTO, siempre el último except
         print("Ha sucedido algo extraño, ¡lo siento!")
+"""
 
 """
 EJERCICIO 4
@@ -141,19 +147,31 @@ except Exception as e:
     print(e)
 
 # 4,2
-for e in alumno1:
-    media1 = alumno1[e]
-for e in alumno2:
-    media2 = alumno2[e]
-for e in alumno3:
-    media3 = alumno3[e]
+media1=0
+media2=0
+media3=0
 
-print("La media del alumno ", alumno1["nombre"], " es de ", media1)
-print("La media del alumno ", alumno2["nombre"], " es de ", media2)
-print("La media del alumno ", alumno3["nombre"], " es de ", media3)
-medias = [media1, media2, media3]
-medias.sort()
-print("La media más grande es:", medias[len(medias) - 1])
+for e in range(1,11):
+    key = "Pt" + str(e)
+    media1 += alumno1[key]
+for e in range(1,11):
+    key = "Pt" + str(e)
+    media2 += alumno2[key]
+for e in range(1,11):
+    key = "Pt" + str(e)
+    media3 += alumno3[key]
+
+print("La media del alumno ", alumno1["nombre"], " es de ", media1/10)
+print("La media del alumno ", alumno2["nombre"], " es de ", media2/10)
+print("La media del alumno ", alumno3["nombre"], " es de ", media3/10)
+
+if media1/10 > media2/10 > media3/10:
+    print("La media más grande es la del alumno ", alumno1["nombre"])
+elif media1/10 < media2/10 > media3/10:
+    print("La media más grande es la del alumno ", alumno2["nombre"])
+elif media1/10 < media2/10 < media3/10:
+    print("La media más grande es la del alumno ", alumno3["nombre"])
+print()
 
 # 4.3
 try:
@@ -172,6 +190,7 @@ try:
             print("Son iguales.")
 except KeyError:
     print("Has recorrido más de la cuenta, listillo.")
+print()
 
 # 4.4
 print("Alumno ", alumno1["nombre"])
