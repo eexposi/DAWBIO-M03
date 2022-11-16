@@ -147,29 +147,29 @@ except Exception as e:
     print(e)
 
 # 4,2
-media1=0
-media2=0
-media3=0
+media1 = 0
+media2 = 0
+media3 = 0
 
-for e in range(1,11):
+for e in range(1, 11):
     key = "Pt" + str(e)
     media1 += alumno1[key]
-for e in range(1,11):
+for e in range(1, 11):
     key = "Pt" + str(e)
     media2 += alumno2[key]
-for e in range(1,11):
+for e in range(1, 11):
     key = "Pt" + str(e)
     media3 += alumno3[key]
 
-print("La media del alumno ", alumno1["nombre"], " es de ", media1/10)
-print("La media del alumno ", alumno2["nombre"], " es de ", media2/10)
-print("La media del alumno ", alumno3["nombre"], " es de ", media3/10)
+print("La media del alumno ", alumno1["nombre"], " es de ", media1 / 10)
+print("La media del alumno ", alumno2["nombre"], " es de ", media2 / 10)
+print("La media del alumno ", alumno3["nombre"], " es de ", media3 / 10)
 
-if media1/10 > media2/10 > media3/10:
+if media1 / 10 > media2 / 10 > media3 / 10:
     print("La media más grande es la del alumno ", alumno1["nombre"])
-elif media1/10 < media2/10 > media3/10:
+elif media1 / 10 < media2 / 10 > media3 / 10:
     print("La media más grande es la del alumno ", alumno2["nombre"])
-elif media1/10 < media2/10 < media3/10:
+elif media1 / 10 < media2 / 10 < media3 / 10:
     print("La media más grande es la del alumno ", alumno3["nombre"])
 print()
 
@@ -210,5 +210,3 @@ print("-------------")
 for e in alumno3:
     if e != "nombre":
         print(e, "--", alumno3[e])
-
-

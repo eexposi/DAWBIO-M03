@@ -7,7 +7,6 @@ asignatura y elimine de la lista las asignaturas aprobadas. Al final el programa
 por pantalla las asignaturas que el usuario tiene que repetir.
 """
 
-
 """ EJERCICIO 2 (DICCIONARIOS) ------------------------------------------------------------------
 Escribir un programa que permita gestionar la base de datos de clientes de una empresa.
 Los clientes se guardarán en un diccionario en el que la clave de cada cliente será su NIF,
@@ -29,8 +28,6 @@ En función de la opción elegida el programa tendrá que hacer lo siguiente:
     5. Mostrar la lista de clientes preferentes de la base de datos con su NIF y nombre.
     0. Terminar el programa
 """
-
-
 
 """ EJERCICIO 3 ----------------------------------------------------------------------------------
 Escribir un programa que genere un diccionario con la información del directorio, donde cada

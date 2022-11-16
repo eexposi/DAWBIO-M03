@@ -134,12 +134,3 @@ while True:
         """
     else:
         print("Opción incorrecta.")
-
-
-
-
-
-
-
-
-

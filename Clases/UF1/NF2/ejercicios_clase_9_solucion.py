@@ -1,6 +1,5 @@
 """ CLASE 8 (15/11/22) -- REPASO FINAL PREVIO AL TEST DE LA UF1-NF2 """
 
-
 """ EJERCICIO 1 (LISTAS) ---------------------------------------------------------------
 Escribir un programa que almacene las asignaturas de un curso (por ejemplo Matemáticas, Física, 
 Química, Historia y Lengua) en una lista, pregunte al usuario la nota que ha sacado en cada 
@@ -17,8 +16,6 @@ for asignatura in asignaturas:
 for asignatura in aprovadas:
     asignaturas.remove(asignatura)
 print("Tienes que repetir " + str(asignaturas))
-
-
 
 """ EJERCICIO 2 (DICCIONARIOS) -----------------------------------------------------------------
 Escribir un programa que permita gestionar la base de datos de clientes de una empresa.
@@ -52,7 +49,8 @@ while opcion != '6':
         telefono = input('Introduce el teléfono del cliente: ')
         email = input('Introduce el correo electrónico del cliente: ')
         vip = input('¿Es un cliente preferente (S/N)? ')
-        cliente = {'nombre':nombre, 'dirección':direccion, 'teléfono':telefono, 'email':email, 'preferente':vip=='S'}
+        cliente = {'nombre': nombre, 'dirección': direccion, 'teléfono': telefono, 'email': email,
+                   'preferente': vip == 'S'}
         clientes[nif] = cliente
     if opcion == '2':
         nif = input('Introduce NIF del cliente: ')
@@ -80,7 +78,6 @@ while opcion != '6':
     opcion = input('Menú de opciones\n(1) Añadir cliente\n(2) Eliminar cliente\n(3) '
                    'Mostrar cliente\n(4) Listar clientes\n(5) Listar clientes preferentes\n'
                    '(6) Terminar\nElige una opción:')
-
 
     """ EJERCICIO 3 ----------------------------------------------------------------------------------
     Escribir un programa que genere un diccionario con la información del directorio, donde cada
