@@ -1,4 +1,3 @@
-
 """EXAMEN NF2"""
 """ 
 EXAMEN NF2 - MATRICES, DICCIONARIOS Y CONTROL DE ERRORES --------------------------------------------

@@ -1,4 +1,3 @@
-
 """EXAMEN NF2"""
 """ 
 EXAMEN NF2 - MATRICES, DICCIONARIOS Y CONTROL DE ERRORES --------------------------------------------
@@ -22,41 +21,41 @@ Y las letras se relacionan del 0 al 22:
 etc...
 
 """
-LETRAS = "TRWAGMYFPDXBNJZSQVHLCKE"
-dicc = {}
-todo_correcto = False
-while todo_correcto == False:
-    try:
-        nombre = input("Indicame tu nombre: ")
-        dni_sinletra = input("Indica el DNI sin letra: ")
-        if len(nombre) < 1:
-            raise Exception("El nombre es incorrecto.")
-        elif dni_sinletra[len(dni_sinletra)-1].isalpha():
-            raise Exception("Has puesto la letra, inútil")
-        elif len(dni_sinletra) != 8:
-            raise Exception("El DNI tiene una longitud incorrecta. Vigila que no hayas puesto la letra.")
-        else:
-            print("Los datos introducidos son correctos.")
-            todo_correcto = True
-    except Exception as error:
-        print(error)
-
-if todo_correcto == True:
-    todo_correcto = False
-    try:
-        letra = LETRAS[int(dni_sinletra)%23]
-        dni_completo = dni_sinletra + letra
-        dicc[nombre] = dni_completo
-        todo_correcto = True
-    except Exception as error:
-        print(error)
-
-if todo_correcto == True:
-    try:
-        for key in dicc:
-            print(key, dicc[key], sep = " ---- ")
-    except Exception as error:
-        print(error)
+# LETRAS = "TRWAGMYFPDXBNJZSQVHLCKE"
+# dicc = {}
+# todo_correcto = False
+# while todo_correcto == False:
+#     try:
+#         nombre = input("Indicame tu nombre: ")
+#         dni_sinletra = input("Indica el DNI sin letra: ")
+#         if len(nombre) < 1:
+#             raise Exception("El nombre es incorrecto.")
+#         elif dni_sinletra[len(dni_sinletra)-1].isalpha():
+#             raise Exception("Has puesto la letra, inútil")
+#         elif len(dni_sinletra) != 8:
+#             raise Exception("El DNI tiene una longitud incorrecta. Vigila que no hayas puesto la letra.")
+#         else:
+#             print("Los datos introducidos son correctos.")
+#             todo_correcto = True
+#     except Exception as error:
+#         print(error)
+#
+# if todo_correcto == True:
+#     todo_correcto = False
+#     try:
+#         letra = LETRAS[int(dni_sinletra)%23]
+#         dni_completo = dni_sinletra + letra
+#         dicc[nombre] = dni_completo
+#         todo_correcto = True
+#     except Exception as error:
+#         print(error)
+#
+# if todo_correcto == True:
+#     try:
+#         for key in dicc:
+#             print(key, dicc[key], sep = " ---- ")
+#     except Exception as error:
+#         print(error)
 
 
 """
