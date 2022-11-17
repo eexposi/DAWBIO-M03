@@ -39,7 +39,7 @@ la posición de los barcos antes de lanzar el programa.
 
 # Antes de empezar a jugar:
 - Creamos un tablero de 4x4 vacío ('A')
-- Colocamos 2 barcos (posición con 'B'): 2 celdas y 3 celdas (horizontal o vertical pero que no solapen)
+- Colocamos 2 barcos (posición con 'B'), uno de 2 celdas y otro de 3 celdas (horizontal o vertical pero que no solapen)
 
 # Al iniciar el programa...
 - Mostrar el menú de juego (diccionario o lista) y tablero inicial con los barcos:
@@ -47,7 +47,7 @@ la posición de los barcos antes de lanzar el programa.
         0 - Salir
 - En random, hacemos tiradas:
     - devolver posición de la tirada
-    - devolver agua (cambiar por 'X') o tocado (cambiar por 'T')
+    - devolver agua (cambiar la casilla vacía 'A' por 'X') o tocado (cambiar la casilla de barco 'B' por 'T')
     - devolver estado del tablero
     - Esperar 'ENTER' para siguiente tirada
 - Al completar 6 tiradas, deberemos devolver un mensaje según si hemos conseguido hundir todos los barcos o no
