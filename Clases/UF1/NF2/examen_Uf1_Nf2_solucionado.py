@@ -1,4 +1,7 @@
-""" EXAMEN NF2 - MATRICES, DICCIONARIOS Y CONTROL DE ERRORES --------------------------------------------------------------
+
+"""EXAMEN NF2"""
+""" 
+EXAMEN NF2 - MATRICES, DICCIONARIOS Y CONTROL DE ERRORES --------------------------------------------
 
 -----------------------------------------------------------
 EJERCICIO 1  ----------------------------------------------
@@ -11,16 +14,17 @@ EJERCICIO 1  ----------------------------------------------
                     ---------
                     Nombre --> XXXXXXXX-X
 
-
+"""
+"""
 -----------------------------------------------------------
 EJERCICIO 2: CALCULADORA DE DIVISIÓN ----------------------
 -----------------------------------------------------------
 - Pedir al usuario 2 números.
 - While hasta que le introduzcamos 'X' en el primer valor
 - Realizar la división entre ellos, gestionando todos los posibles errores y mostrando por pantalla el error.
+"""
 
-
-
+"""
 -----------------------------------------------------------
 EJERCICIO 3: HUNDIR LA FLOTA ------------------------------
 -----------------------------------------------------------
