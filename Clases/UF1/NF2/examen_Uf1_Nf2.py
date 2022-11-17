@@ -14,6 +14,13 @@ EJERCICIO 1  ----------------------------------------------
                     ---------
                     Nombre --> XXXXXXXX-X
 
+Las letras son: TRWAGMYFPDXBNJZSQVHLCKE
+Y las letras se relacionan del 0 al 22:
+0 = T
+1 = R
+2 = W
+etc...
+
 """
 """
 -----------------------------------------------------------
