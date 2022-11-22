@@ -30,7 +30,7 @@ while todo_correcto == False:
         dni_sinletra = input("Indica el DNI sin letra: ")
         if len(nombre) < 1:
             raise Exception("El nombre es incorrecto.")
-        elif dni_sinletra[len(dni_sinletra)-1].isalpha():
+        elif dni_sinletra[len(dni_sinletra) - 1].isalpha():
             raise Exception("Has puesto la letra, inútil")
         elif len(dni_sinletra) != 8:
             raise Exception("El DNI tiene una longitud incorrecta. Vigila que no hayas puesto la letra.")
@@ -43,7 +43,7 @@ while todo_correcto == False:
 if todo_correcto == True:
     todo_correcto = False
     try:
-        letra = LETRAS[int(dni_sinletra)%23]
+        letra = LETRAS[int(dni_sinletra) % 23]
         dni_completo = dni_sinletra + letra
         dicc[nombre] = dni_completo
         todo_correcto = True
@@ -55,10 +55,9 @@ if todo_correcto == True:
         print("  Usuarios")
         print("  --------")
         for key in dicc:
-            print(key, dicc[key], sep = " ---- ")
+            print(key, dicc[key], sep=" ---- ")
     except Exception as error:
         print(error)
-
 
 """
 -----------------------------------------------------------
@@ -69,6 +68,20 @@ EJERCICIO 2: CALCULADORA DE DIVISIÓN ----------------------
 - Realizar la división entre ellos, gestionando todos los posibles errores y mostrando por pantalla el error.
 """
 
+try:
+    while True:
+        n1 = int(input("Número 1: "))
+        if n1 == "X":
+            break
+        else:
+            n2 = int(input("Número 2: "))
+            print("El resultado es ", str(n1 / n2))
+except ZeroDivisionError:
+    print("division by zero")
+except ValueError:
+    print("invalid literal for int() with base 10")
+except Exception as e:
+    print(e)
 
 """
 -----------------------------------------------------------
@@ -116,64 +129,65 @@ EJEMPLO DEL 1ER TURNO ----------------------------------------------------
 --------------------------------------------------------------------------------------------------- """
 import random
 
-menu=["Salir","Jugar"]
-tablero=[["A","A","A","A"],["A","A","A","A"],["A","A","A","A"],["A","A","A","A"]]
-barcos=5
-tiradas=6
-
-barco1=[[0,0],[1,0]]
-barco2=[[2,1],[2,2],[2,3]]
-
-for i in range(len(barco1)):
-    tablero[barco1[i][0]][barco1[i][1]] = "B"
-for i in range(len(barco2)):
-    tablero[barco2[i][0]][barco2[i][1]] = "B"
-
-print("\nTablero inicial: ")
-for columna in range(len(tablero)):
-    for fila in range(len(tablero[i])):
-        print(tablero[columna][fila], end=" ")
-    print()
-
 while True:
+    menu=["Salir","Jugar"]
+    tablero=[["A","A","A","A"],["A","A","A","A"],["A","A","A","A"],["A","A","A","A"]]
+    barcos=5
+    tiradas=6
+
+    barco1=[[0,0],[1,0]]
+    barco2=[[2,1],[2,2],[2,3]]
+
+    for i in range(len(barco1)):
+        tablero[barco1[i][0]][barco1[i][1]] = "B"
+    for i in range(len(barco2)):
+        tablero[barco2[i][0]][barco2[i][1]] = "B"
+
+    print("\nTablero inicial: ")
+    for columna in range(len(tablero)):
+        for fila in range(len(tablero[i])):
+            print(tablero[columna][fila], end=" ")
+        print()
+
     print(" Menú:")
     for i in range(len(menu)):
         print(i, menu[i], sep="-")
-    opcion=int(input("Selecciona opción: "))
+    try:
+        opcion=int(input("Selecciona opción: "))
 
-    if opcion==0:
-        print("Has salido de la partida.")
-        break
+        if opcion==0:
+            print("Has salido de la partida.")
+            break
 
-    elif opcion==1:
-        tirada_ok=False
-        while tirada_ok==False or tiradas>0 or barcos<5:
-            x=random.randint(0,3)
-            y=random.randint(0,3)
-            print("Posición de tirada: x=",x, "y=",y)
-            if tablero[x][y]=="A":
-                print("Agua")
-                tablero[x][y]="X"
-                tiradas-=1
-                tirada_ok=True
-            elif tablero[x][y]=="B":
-                print("Tocado!")
-                tablero[x][y] = "T"
-                tiradas -= 1
-                barcos-=1
-                tirada_ok = True
-            elif tablero[x][y]=="X" or tablero[x][y]=="T":
-                print("Repite tirada")
+        elif opcion==1:
+            while tiradas>0 and barcos>0:
+                x=random.randint(0,3)
+                y=random.randint(0,3)
+                print("Posición de tirada: x=",x, "y=",y)
+                if tablero[x][y]=="A":
+                    print("Agua")
+                    tablero[x][y]="X"
+                    tiradas-=1
+                elif tablero[x][y]=="B":
+                    print("Tocado!")
+                    tablero[x][y] = "T"
+                    tiradas -= 1
+                    barcos-=1
+                elif tablero[x][y]=="X" or tablero[x][y]=="T":
+                    print("Repite tirada")
 
-            print()
-            for columna in range(len(tablero)):
-                for fila in range(len(tablero[i])):
-                    print(tablero[columna][fila], end=" ")
                 print()
+                for columna in range(len(tablero)):
+                    for fila in range(len(tablero[i])):
+                        print(tablero[columna][fila], end=" ")
+                    print()
+                input("Pulsa una tecla para volver a tirar...")
 
-        print(barcos)
-        print(tiradas)
-        if barcos==5:
-            print("Has ganado!")
-        if tiradas==0 and barcos>0:
-            print("La partida ha finalizado!")
+            if barcos==0:
+                print("Has ganado!")
+            if tiradas==0 and barcos>0:
+                print("La partida ha finalizado!")
+        else:
+            raise Exception ("¡La opción no es correcta!")
+    except Exception as e:
+        print("¡La opción no es correcta!")
