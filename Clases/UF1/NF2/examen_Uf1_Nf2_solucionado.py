@@ -130,13 +130,13 @@ EJEMPLO DEL 1ER TURNO ----------------------------------------------------
 import random
 
 while True:
-    menu=["Salir","Jugar"]
-    tablero=[["A","A","A","A"],["A","A","A","A"],["A","A","A","A"],["A","A","A","A"]]
-    barcos=5
-    tiradas=6
+    menu = ["Salir", "Jugar"]
+    tablero = [["A", "A", "A", "A"], ["A", "A", "A", "A"], ["A", "A", "A", "A"], ["A", "A", "A", "A"]]
+    barcos = 5
+    tiradas = 6
 
-    barco1=[[0,0],[1,0]]
-    barco2=[[2,1],[2,2],[2,3]]
+    barco1 = [[0, 0], [1, 0]]
+    barco2 = [[2, 1], [2, 2], [2, 3]]
 
     for i in range(len(barco1)):
         tablero[barco1[i][0]][barco1[i][1]] = "B"
@@ -153,27 +153,27 @@ while True:
     for i in range(len(menu)):
         print(i, menu[i], sep="-")
     try:
-        opcion=int(input("Selecciona opción: "))
+        opcion = int(input("Selecciona opción: "))
 
-        if opcion==0:
+        if opcion == 0:
             print("Has salido de la partida.")
             break
 
-        elif opcion==1:
-            while tiradas>0 and barcos>0:
-                x=random.randint(0,3)
-                y=random.randint(0,3)
-                print("Posición de tirada: x=",x, "y=",y)
-                if tablero[x][y]=="A":
+        elif opcion == 1:
+            while tiradas > 0 and barcos > 0:
+                x = random.randint(0, 3)
+                y = random.randint(0, 3)
+                print("Posición de tirada: x=", x, "y=", y)
+                if tablero[x][y] == "A":
                     print("Agua")
-                    tablero[x][y]="X"
-                    tiradas-=1
-                elif tablero[x][y]=="B":
+                    tablero[x][y] = "X"
+                    tiradas -= 1
+                elif tablero[x][y] == "B":
                     print("Tocado!")
                     tablero[x][y] = "T"
                     tiradas -= 1
-                    barcos-=1
-                elif tablero[x][y]=="X" or tablero[x][y]=="T":
+                    barcos -= 1
+                elif tablero[x][y] == "X" or tablero[x][y] == "T":
                     print("Repite tirada")
 
                 print()
@@ -183,11 +183,11 @@ while True:
                     print()
                 input("Pulsa una tecla para volver a tirar...")
 
-            if barcos==0:
+            if barcos == 0:
                 print("Has ganado!")
-            if tiradas==0 and barcos>0:
+            if tiradas == 0 and barcos > 0:
                 print("La partida ha finalizado!")
         else:
-            raise Exception ("¡La opción no es correcta!")
+            raise Exception("¡La opción no es correcta!")
     except Exception as e:
         print("¡La opción no es correcta!")
