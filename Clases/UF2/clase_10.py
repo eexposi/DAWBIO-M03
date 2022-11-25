@@ -80,13 +80,16 @@ print(total_suma)
 def sumar(num1, num2):
     suma = num1 + num2
     if suma > 10:
-        return
+        return 5000
     else:
         return suma
 
+total_suma = sumar(1,5)
+total_suma2 = sumar(10,10)
 
-total_suma = sumar(1, 50)
 print(total_suma)
+print(total_suma2)
+
 
 "Con el return, podemos obtener cualquier tipo de valor o resultado"
 
@@ -96,18 +99,46 @@ Tras la definicion de cada metodo comentaremos su funcionalidad. Indicaremos que
 @return devuelve un....
 """
 
+def saludo(nombre, apellido, direccion, ciudad, provincia, pais, codigo_postal):
+    """
+
+    :param nombre:
+    :param apellido:
+    :param direccion:
+    :param ciudad:
+    :param provincia:
+    :param pais:
+    :param codigo_postal:
+    :return:
+    """
+    mensaje = "Hola " + nombre
+    return mensaje
+
+
 """
 Ejercicio 1
-Crearemos una funcion que recibirá por parametro un nombre y una edad.
-Esta funcion mostrara un mensaje saludando al usuario por su nombre e indicandole cual es su edad.
+Crearemos una funcion que recibirá por parametro un nombre y una edad que
+hayamos solicitado al usuario. Esta funcion mostrara un mensaje saludando 
+al usuario por su nombre e indicandole cual es su edad.
 Si no se pasan parametros, por defecto sera "tonto" y 0.
 """
+def saludo(nombre="tonto",edad=0):
+    frase = ("Hola " + nombre + ", tu edad es " + edad + " años.")
+    return frase
+
+nom=input("Indícame tu nombre: ")
+edat=input("Dime tu edad: ")
+print(saludo(nom,edat))
+
 
 """
 Ejercicio 2
 Haremos un menu con 5 opciones: salir, sumar, restar, multiplicar y dividir
-Le pediremos al usuario 2 numeros, mostraremos el menu y, segun la opcion, ejecutaremos la funcion que corresponda.
-Mostrando el resultado mediante la funcion
+Le pediremos al usuario 2 numeros, mostraremos el menu y, segun la opcion, 
+ejecutaremos la funcion que corresponda, mostrando el resultado mediante
+la funcion.
+El menú se muestra con una función. Todas las opciones son funciones (def sumar,
+def restar...)
 """
 
 """
