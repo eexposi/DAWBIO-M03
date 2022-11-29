@@ -4,8 +4,6 @@ Crearemos una funcion que recibirá por parametro un nombre y una edad.
 Esta funcion mostrara un mensaje saludando al usuario por su nombre e indicandole cual es su edad.
 Si no se pasan parametros, por defecto sera "tonto" y 0.
 """
-
-
 def saludar(nombre="tonto", edad=0):
     """
     Mostrara por pantalla el nombre y la edad del usuario
@@ -14,16 +12,18 @@ def saludar(nombre="tonto", edad=0):
     """
     print("Hola", nombre, "tu edad es", edad)
 
-
 saludar("Eric", 35)
+
+
 
 """
 Ejercicio 2
-Haremos un menu con 5 opciones: salir, sumar, restar
-Le pediremos al usuario 2 numeros, mostraremos el menu y, segun la opcion, ejecutaremos la funcion que corresponda.
-Mostrando el resultado mediante la funcion
+Haremos un menu con 5 opciones: salir, sumar, restar, multiplicar i dividir.
+Le pediremos al usuario 2 numeros, mostraremos el menu y, segun la opcion, 
+ejecutaremos la funcion que corresponda, mostrando el resultado mediante 
+la funcion
 """
-menu = ["Salir", "Sumar", "Restar"]
+menu = ["Salir", "Sumar", "Restar", "Multiplicar", "Dividir"]
 num1 = int(input("Indica un numero: "))
 num2 = int(input("Indica un numero: "))
 
