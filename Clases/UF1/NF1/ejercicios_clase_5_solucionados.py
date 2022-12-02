@@ -1,7 +1,8 @@
 """EJERCICIOS Clase 27 de spetiembre 2022"""
 
 """EJERCICIO 3
-- Pediremos al usuario numeros de forma indefinida hasta que ingrese el 999, y se iran guardando en una lista
+- Pediremos al usuario numeros de forma indefinida hasta que
+ ingrese el 999, y se iran guardando en una lista
 - Crearemos una nueva lista donde guardaremos la serie a la inversa
 - De la primera lista, obtendremos el numero mas grande
 - De la segunda lista, obtendremos el numero más pequeño.

@@ -70,3 +70,10 @@ def horas_a_minutos(horas):
 hours=int(input("Indica la hora de inicio del evento: "))
 mins=int(input("Indica los minutos de inicio del evento: "))
 min_totales = horas_a_minutos(hours)+mins
+
+# Método que le llega un número (1-20), según el cuál devolverá tramo (1-4)(6-10)(11-15)(16-20)
+
+# Método que printa un menú y devuelve la opcion elegida por el usuario
+
+# Método que devuelve la cantidad de carácteres que tiene un string pasado por parametro
+

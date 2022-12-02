@@ -39,7 +39,8 @@ EJERCICIO 2
 Pediremos una frase al usuario y le devolveremos el numero de caracteres totales de la frase.
 
 2.2.-
-Con la misma frase, eliminaremos todas las vocales, guardando la frase en una variable nueva y mostrando ambas.
+Con la misma frase, eliminaremos todas las vocales, 
+guardando la frase en una variable nueva y mostrando ambas.
 
 2.3.- 
 La misma frase, la mostraremos a la inversa:

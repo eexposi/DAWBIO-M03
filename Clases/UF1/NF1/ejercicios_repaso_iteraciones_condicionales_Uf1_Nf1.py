@@ -1,8 +1,8 @@
 """Practicas clase preparación Pt1"""
 
 """EJERCICIO 1
-- Solicitaremos al usuario un numero mayor que 1 y menor que 100. Este número serán los 
-    bloques.
+- Solicitaremos al usuario un numero mayor que 1 y menor que 100.
+ Este número serán los bloques.
 - Si el numero no cumple estos requisitos, volveremos a solicitarlo.
 - Haremos una piramide usando el número de bloques como base.
 - Tras mostrar la piramide, el programa nos indicará cuantos bloques se han utilizado.
