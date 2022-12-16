@@ -7,7 +7,8 @@
 	No se evaluará código comentado
 	La entrega fuera de plazo equivaldrá a un 0
 	No se valorarán métodos/funciones de + 10 líneas.
-	El programa principal podrá tener también un máximo de 10 líneas. Con excepción de encadenamientos de elif, que no contarán para este limite
+	El programa principal podrá tener también un máximo de 10 líneas. Con excepción de encadenamientos de elif,
+	que no contarán para este limite
 	Controlar los errores que se puedan producir FUERA de los métodos/funciones. El programa NO puede fallar.
 	Todos los métodos deberán estar comentados como se expuso en clase:
 
