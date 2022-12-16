@@ -84,27 +84,27 @@ print(res)
 res = sum_num(numero2, numero1)
 print(res)
 
-""" EJERCICIO 11: """
-def get_letra(lista,5):
-    return lista[index]
-
-lst = "Voy a suspender"
-indice = 5
-print(get_letra(lst,indice))
-
-""" EJERCICIO 12: """
-def multiplicar(dato):
-    r = dato*20
-    if r < 100:
-        multiplicar(r)
-    else:
-        return r-100
-
-print(multiplicar(2))
-
-""" EJERCICIO 13: """
-def resta(num):
-    return num-1
-
-for i in range(100):
-    print(resta(i),"_",end="")
+# """ EJERCICIO 11: """
+# def get_letra(lista,5):
+#     return lista[index]
+#
+# lst = "Voy a suspender"
+# indice = 5
+# print(get_letra(lst,indice))
+#
+# """ EJERCICIO 12: """
+# def multiplicar(dato):
+#     r = dato*20
+#     if r < 100:
+#         multiplicar(r)
+#     else:
+#         return r-100
+#
+# print(multiplicar(2))
+#
+# """ EJERCICIO 13: """
+# def resta(num):
+#     return num-1
+#
+# for i in range(100):
+#     print(resta(i),"_",end="")
