@@ -83,7 +83,7 @@ lst2 = [3, 1, 3, 6, 7, 0, 3, 9, 4, 5, 4, 2, 9, 2, 6, 5, 4, 2, 3, 9, 3, 4, 4, 1, 
         0, 10, 7, 0, 1, 6, 2, 2, 7, 9, 5, 7, 6, 9, 2, 6, 1, 8, 0, 6, 3, 8, 1, 7, 2, 0]
 # 4.1
 print("4.1 ---- Compararemos ambas listas, mostrando por pantalla cual"
-+" de las 2 es mas larga.")
+      + " de las 2 es mas larga.")
 long_lst1 = 0
 suma_lst1 = 0
 for i in lst1:
