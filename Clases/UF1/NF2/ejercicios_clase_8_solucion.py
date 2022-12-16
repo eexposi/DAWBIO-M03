@@ -175,7 +175,7 @@ print()
 
 # 4.3
 try:
-    for i in range(1, 14):
+    for i in range(1, 11):
         key = "Pt" + str(i)
         if alumno1[key] > alumno2[key] > alumno3[key]:
             print("La nota del alumno ", alumno1["nombre"], " es mayor. Notas: ", alumno1[key], alumno2[key],

@@ -1,10 +1,13 @@
+# EXAMEN UF2 - NF1 - METODOS Y FUNCIONES --------------------------------------------
+
+
 """
 INSTRUCCIONES
 - No se valorarán metodos/funciones de + 10 lineas.
-- El programa principal podrá tener tambóen un máximo de
- 10 lineas. Con excepción de encadenamientos de elif, que no contarán para este limite
--  Todos los metodos deberán estar comentados como se expuso en clase:
+- El programa principal podrá tener también un máximo de 10 lineas. Con excepción de encadenamientos de elif,
+  que no contarán para este limite.
 - Controlar los errores que se puedan producir FUERA de los metodos/funciones. El programa NO puede fallar.
+- Todos los metodos deberán estar comentados como se expuso en clase:
 
 def ejemplo(str):
 #     '''
@@ -14,22 +17,11 @@ def ejemplo(str):
 #     '''
 #     print("esto no hace nada")
 #     return 1
-
-
-
-"""
-"""
-EXAMEN UF2 - NF1 - METODOS Y FUNCIONES --------------------------------------------
 """
 
-"""
 
-"""
-
-"""
-(2P)
------------------------------------------------------------
-EJERCICIO 1  ----------------------------------------------
+""" --------------------------------------------------------------------------------------------------------------------
+EJERCICIO 1 (2P) ------------------------------------------
 -----------------------------------------------------------
 - Pedir al usuario su nombre y su DNI sin letra.
 - Mostrar todos los datos en forma de tabla.
@@ -45,14 +37,12 @@ Y las letras se relacionan del 0 al 22:
 1 = R
 2 = W
 etc...
+---------------------------------------------------------------------------------------------------------------------"""
 
-"""
 
-"""
+""" --------------------------------------------------------------------------------------------------------------------
+EJERCICIO 2 (4p) ------------------------------------------
 -----------------------------------------------------------
-EJERCICIO 2  ----------------------------------------------
------------------------------------------------------------
-(4p)
 Haremos un menu con las siguientes opciones: Salir, Crear BBDD, Crear 1 elemento BBDD 
 Consultar toda la BBDD, Consultar 1 elemento BBDD, Eliminar elemento BBDD
 
@@ -62,7 +52,6 @@ base_datos = [
                 "Telefono",
                 "Fecha Nacimiento"]
                 ]
-                
 
 - Crear BBDD: Generara un conjunto de datos para nuestra base de datos con 4 personas diferentes,
 con 4 ID, 4 nombres...etc.
@@ -85,15 +74,12 @@ Nombre: -----
 ...
 Desea eliminiar el elemento?
 
+---------------------------------------------------------------------------------------------------------------------"""
 
-"""
 
-"""
+""" --------------------------------------------------------------------------------------------------------------------
+EJERCICIO 3 (2p) ------------------------------------------
 -----------------------------------------------------------
-EJERCICIO 3  ----------------------------------------------
------------------------------------------------------------
-(2p)
-
 Completa el ejercicio adjunto, .py
 Os dejamos la información.
 
@@ -126,14 +112,12 @@ lista_comparada = get_coincidencias(lst)
 print("LST COMPARADA")
 mostrar_lista(lista_comparada)
 
+---------------------------------------------------------------------------------------------------------------------"""
 
 
-"""
-
-
-"""
-EJERCICIO 4
-(2p)
+""" --------------------------------------------------------------------------------------------------------------------
+EJERCICIO 4 (2p) ------------------------------------------
+-----------------------------------------------------------
 Dadas las listas:
 lst1 = [3, 8, 6, 5, 7, 7, 2, 7, 7, 10, 3, 4, 3, 1, 3, 6, 6, 5, 5, 6, 8, 3, 4, 8, 1, 10, 4, 9, 9, 7, 4, 10, 5, 0, 0, 2,
         0, 1, 5, 1, 2, 4, 4, 5, 3, 2, 6, 4, 10, 9, 4, 6, 2, 1, 3, 4, 7, 0, 2, 10, 5, 3, 1, 10, 6, 3, 7, 5, 5, 1, 5, 3,
@@ -148,6 +132,7 @@ lst2 = [3, 1, 3, 6, 7, 0, 3, 9, 4, 5, 4, 2, 9, 2, 6, 5, 4, 2, 3, 9, 3, 4, 4, 1, 
  Indicando que lista posee el elemento con un valor más pequeño.
 4.4 - Ordenaremos ambas listas de la misma forma y las mostraremos una de mayor a menor y la otra al revés de forma
 invertida.
-"""
+
+---------------------------------------------------------------------------------------------------------------------"""
 
 

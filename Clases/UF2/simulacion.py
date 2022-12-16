@@ -1,5 +1,41 @@
-""" EJERCICIO DE REPASO DE DICCIONARIOS ----------------------------------------------------------------
+# Clase 14: Repaso de métodos + try/except - 16/12/22
+#
+# INSTRUCCIONES
+# - No se valorarán metodos/funciones de >10 lineas.
+# - El programa principal podrá tener también un máximo de 10 lineas. Con excepción de encadenamientos de elif,
+#   que no contarán para este limite
+# - Controlar los errores que se puedan producir FUERA de los metodos/funciones. El programa NO puede fallar.
+# - Todos los metodos deberán estar comentados como se expuso en clase:
+#
+# def ejemplo(str):
+#     '''
+#     Esta funcion no hace nada
+#     :param str: es un string que confrorma una palabra para nada
+#     :return: el 1, porque funciona
+#     '''
+#     print("esto no hace nada")
+#     return 1
 
+
+""" EJERCICIO DNI  -----------------------------------------------------------------------------------------------------
+- Pedir al usuario su nombre y su DNI sin letra.
+- Mostrar todos los datos en forma de tabla.
+- Que el programa nos pida cuantos DNI queremos añadir
+-
+                    Usuarios
+                    ---------
+                    Nombre --> XXXXXXXX-X
+
+Las letras son: TRWAGMYFPDXBNJZSQVHLCKE
+Y las letras se relacionan del 0 al 22:
+0 = T
+1 = R
+2 = W
+etc...
+---------------------------------------------------------------------------------------------------------------------"""
+
+
+""" EJERCICIO DICCIONARIOS ---------------------------------------------------------------------------------------------
 Mediante el uso de diccionario/s, vamos a gestionar los datos de alumnos y sus notas.
 IMPORTANTE: para cada alumno, el sistema debe permitir almacenar un número indeterminado de notas.
 diccionario = {"Nombre": [nota1, nota2, ...], "Nombre2": [nota1, nota2, ...], ...}
@@ -24,26 +60,6 @@ volverá al menú principal. El menú se generará con lista o diccionario, no u
             5 - Borrar un alumno
             0 - Salir
         Introduce opción:
---------------------------------------------------------------------------------------------------- """
+---------------------------------------------------------------------------------------------------------------------"""
 
 
-"""
------------------------------------------------------------
-EJERCICIO DNI  ----------------------------------------------
------------------------------------------------------------
-- Pedir al usuario su nombre y su DNI sin letra.
-- Mostrar todos los datos en forma de tabla.
-- Que el programa nos pida cuantos DNI queremos añadir
-- 
-                    Usuarios
-                    ---------
-                    Nombre --> XXXXXXXX-X
-
-Las letras son: TRWAGMYFPDXBNJZSQVHLCKE
-Y las letras se relacionan del 0 al 22:
-0 = T
-1 = R
-2 = W
-etc...
-
-"""
